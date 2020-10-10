@@ -6,6 +6,12 @@ import { Hero, Navigation } from "./components"
 import "./assets/scss/base.scss"
 
 function App() {
+
+  const user = { 
+    firstName: "Kenny",
+    lastName: "Ngo",
+  }
+
   return (
     <Router>    
       <div className="App">
