@@ -1,16 +1,21 @@
 import React from 'react';
+import { Redirect, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import {Hero } from "./components"
-// import Hero from "./components/hero"
+import { Hero, Navigation } from "./components"
 
 import "./assets/scss/base.scss"
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hi!</h1>
-      <Hero />
-    </div>
+    <Router>    
+    <Navigation />
+      <div className="App">
+        <h1>Hi!</h1>
+        <Hero />
+      </div>
+    
+    </Router>
+
   );
 }
 
