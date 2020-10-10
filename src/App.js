@@ -8,12 +8,14 @@ import "./assets/scss/base.scss"
 function App() {
   return (
     <Router>    
-    <Navigation />
       <div className="App">
-        <h1>Hi!</h1>
+        <Navigation />
+        <Switch>
+
+        </Switch>
         <Hero />
-      </div>
     
+      </div>
     </Router>
 
   );
