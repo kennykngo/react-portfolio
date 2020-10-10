@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
         <div className="wrapper">
             <Row> 
-                <Col>Hi</Col>
+                {/* <Col>Hi</Col> */}
             </Row>
         </div>
     </div>
