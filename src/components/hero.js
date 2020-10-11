@@ -8,7 +8,12 @@ const Hero = () => {
     return (
     <div className="hero">
         <div className="wrapper">
-            <Row> 
+            <Row>
+                <Col md={12} lg={6}>
+                    <div className="hero-image">
+                        <img src={HeroImage} alt="hero" />
+                    </div>
+                </Col>
                 <Col md={12} lg={6}>
                     <div className="hero-info">
                         <h1 className="font-weight-800 font-60">
@@ -23,11 +28,7 @@ const Hero = () => {
                         
                     </div>
                 </Col>
-                <Col md={12} lg={6}>
-                    <div className="hero-image">
-                        <img src={HeroImage} alt="hero" />
-                    </div>
-                </Col>
+
             </Row>
         </div>
     </div>
