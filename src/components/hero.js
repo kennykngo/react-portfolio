@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="hero">
         <div className="wrapper">
             <Row>
-                <Col md={12} lg={6}>
+                <Col sm={8} lg={6}>
                     <div className="hero-image">
                         <img src={HeroImage} alt="hero" />
                     </div>
