@@ -3,7 +3,8 @@
   padding-block-end: 60px;
   padding-block-start: 100px;
   width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 
   .row {
     display: flex;
@@ -15,16 +16,17 @@
   }
 
   .hero-image {
-    width: 275px;
+    width: 200px;
     // max-width: 275px;
-    height: 275px;
+    height: 200px;
     // max-height: 275px;
     overflow: hidden;
     border-radius: 3000px;
     position: relative;
-    padding-inline-start: 20px;
+    // float: right;
 
     img {
+      // padding-inline-start: 20px;
       // width: 100%;
       display: inline;
       margin: 0 auto;

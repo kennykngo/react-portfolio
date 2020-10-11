@@ -7,9 +7,9 @@ import HeroImage from "../assets/images/_DSC0459-2.jpg"
 const Hero = () => {
     return (
     <div className="hero">
-        <div className="wrapper">
-            <Row>
-                <Col sm={8} lg={6}>
+        {/* <div className="wrapper"> */}
+            <Row center="xs">
+                <Col>
                     <div className="hero-image">
                         <img src={HeroImage} alt="hero" />
                     </div>
@@ -30,7 +30,7 @@ const Hero = () => {
                 </Col>
 
             </Row>
-        </div>
+        {/* </div> */}
     </div>
     )
 }
