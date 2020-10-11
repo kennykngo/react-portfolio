@@ -1,3 +1,38 @@
 .hero {
-    background-color: red;
+  //   padding-inline-end: 60px;
+  padding-block-end: 60px;
+  padding-block-start: 100px;
+  width: 100%;
+  margin: auto;
+
+  .font-weight-800 {
+    font-weight: 800;
+  }
+
+  .font-60 {
+    font-size: 60px;
+  }
+
+  .hero-info {
+    padding-top: 60px;
+  }
+
+  .hero-image {
+    width: 275px;
+    // max-width: 275px;
+    height: 275px;
+    // max-height: 275px;
+    overflow: hidden;
+    border-radius: 3000px;
+    position: relative;
+
+    img {
+      // width: 100%;
+      display: inline;
+      margin: 0 auto;
+      margin-left: -25%;
+      height: 100%;
+      // width: auto;
+    }
+  }
 }
