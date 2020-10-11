@@ -35,8 +35,15 @@ export default function Navigation ({user}) {
                     {/* <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`} </span> */}
                 </span>
             </div>
-            <i 
+            {/* <i 
                 className="ionicons icon ion-ios-menu" 
+                onClick={() => setMenuActive(!menuActive)} 
+            /> */}
+            <img
+                className="ion-ios-menu"
+                alt="menu"
+                src="../assets/images/mobile-menu.svg"
+                // className="ionicons icon ion-ios-menu" 
                 onClick={() => setMenuActive(!menuActive)} 
             />
         </nav>

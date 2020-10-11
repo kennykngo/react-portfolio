@@ -2,7 +2,7 @@
   //   padding-inline-end: 60px;
   padding-block-end: 60px;
   padding-block-start: 100px;
-  width: 100%;
+  // width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -11,6 +11,7 @@
     flex-direction: row-reverse;
     align-items: center;
   }
+
   .hero-info {
     padding-top: 60px;
   }
@@ -38,12 +39,17 @@
 }
 
 @media screen and (max-width: 900px) {
-  .row {
-    display: flex;
-    flex-direction: row;
+  .hero {
+    // padding-inline-start: 2rem;
+    // margin-inline-start: 2rem;
 
-    .hero-image {
-      float: none;
+    .row {
+      display: flex;
+      flex-direction: row;
+
+      .hero-image {
+        float: none;
+      }
     }
   }
 }

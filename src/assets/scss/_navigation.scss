@@ -4,10 +4,10 @@
   background: white;
   display: flex;
   justify-content: space-between;
-  color: $text-color;
   position: fixed;
   z-index: 100;
   top: 0;
+  color: $text-color;
 
   .menu-title {
     font-size: 22px;
