@@ -69,10 +69,10 @@
   #nav-icon1 span {
     display: block;
     position: absolute;
-    height: 3px;
+    height: 2.5px;
     width: 100%;
     background: $text-color;
-    border-radius: 9px;
+    border-radius: 2px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -83,6 +83,10 @@
     -moz-transition: 0.25s ease-in-out;
     -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
+
+    &:hover {
+      background: $text-link;
+    }
   }
 
   #nav-icon1 span:nth-child(1) {
@@ -160,6 +164,7 @@
       flex-direction: column-reverse;
       padding: 0;
       padding-left: 30px;
+      // box-shadow: 20px 40px 50px grey;
 
       a {
         width: 100%;
