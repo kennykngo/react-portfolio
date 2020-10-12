@@ -23,6 +23,13 @@
     cursor: pointer;
     display: none;
   }
+  .ion-ios-close {
+    font-size: 36px;
+    width: 65px;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
 
   .menu-content-container {
     display: flex;
@@ -115,6 +122,9 @@
       }
     }
     .ion-ios-menu {
+      display: flex;
+    }
+    .ion-ios-close {
       display: flex;
     }
   }
