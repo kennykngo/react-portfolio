@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import { Link } from "react-router-dom";
+import { ThemeContext } from "./theme-provider"
 
 const navLinks = [
     {
@@ -20,10 +21,17 @@ export default function Navigation ({user}) {
     
     const [menuActive, setMenuActive] = useState(false);
 
+    const state = useContext(ThemeContext);
 
+    const navBar = {
+        marginTop: 0,
+        backgroundColor: state.theme.primary,
+        width: "100%",
+        color: state.theme.text
+    }
 
     return ( 
-        <nav className="site-navigation">
+        <nav className="site-navigation" style={navBar}>
             <span className="menu-title">Kenny Ngo</span>
             <div className={`menu-content-container ${menuActive && "active"}` } >
                 <ul>

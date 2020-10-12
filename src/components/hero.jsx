@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Col, Row } from "react-flexbox-grid";
 
-// Need hero image
 import HeroImage from "../assets/images/_DSC0459-2.jpg"
+import { ThemeContext } from "./theme-provider";
 
 const Hero = () => {
+
+    const state = useContext(ThemeContext);
+    const heroStyle = {
+        backgroundColor: state.theme.primary,
+        color: state.theme.text,
+    }
+
     return (
-    <div className="hero">
+    <div className="hero" style={heroStyle}>
         <div className="wrapper">
             <Row>
                 {/* <Col xs={12} lg={10}>
@@ -18,7 +25,7 @@ const Hero = () => {
                         </Col>
                         <Col md={12} lg={6}>
                             <div className="hero-info">
-                                <h1 className="font-weight-800 font-60">
+                                <h1 className="font-weight-800 font-60" style={heroStyle}>
                                     Kenny Ngo
                                 </h1>
                                 <h4>
