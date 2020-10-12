@@ -20,6 +20,8 @@ export default function Navigation ({user}) {
     
     const [menuActive, setMenuActive] = useState(false);
 
+
+
     return ( 
         <nav className="site-navigation">
             <span className="menu-title">Kenny Ngo</span>
@@ -35,10 +37,15 @@ export default function Navigation ({user}) {
                     {/* <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`} </span> */}
                 </span>
             </div>
-            <i 
+            {/* <i 
                 className={`ionicons icon ${menuActive ? "ion-ios-close": "ion-ios-menu"}`} 
                 onClick={() => setMenuActive(!menuActive)} 
-            />
+            /> */}
+            <div id="nav-icon1" className={`${menuActive && "open" }`} onClick={() => setMenuActive(!menuActive)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     )
 }
