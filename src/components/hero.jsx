@@ -28,7 +28,7 @@ const Hero = () => {
                                 <h1 className="font-weight-800 font-60" style={heroStyle}>
                                     Kenny Ngo
                                 </h1>
-                                <h4>
+                                <h4 style={heroStyle}>
                                     kenny.ngo.design@gmail.com · (415)716-1608
                                     </h4>
                                 <p>

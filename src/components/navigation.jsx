@@ -24,20 +24,18 @@ export default function Navigation ({user}) {
     const state = useContext(ThemeContext);
 
     const navBar = {
-        marginTop: 0,
         backgroundColor: state.theme.primary,
-        width: "100%",
         color: state.theme.text
     }
 
     return ( 
         <nav className="site-navigation" style={navBar}>
             <span className="menu-title">Kenny Ngo</span>
-            <div className={`menu-content-container ${menuActive && "active"}` } >
+            <div className={`menu-content-container ${menuActive && "active"}` } style={navBar}>
                 <ul>
                     {navLinks.map((link, index) => (
-                        <li key={index}> 
-                            <Link to={link.path}>{link.title}</Link>
+                        <li key={index}  > 
+                            <Link style={navBar} to={link.path}>{link.title}</Link>
                         </li>
                     ))}
                 </ul>
