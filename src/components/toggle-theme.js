@@ -34,7 +34,7 @@ export default function ToggleTheme() {
 
   return (
     <Button
-      class="mb-5"
+      className="mb-5"
       variant='contained'
       onClick={() => {
         state.setTheme(state.theme.type)

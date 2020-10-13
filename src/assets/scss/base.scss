@@ -1,8 +1,8 @@
-// reordering the scss with var on top and nav on bottom fixes issue
 @import "./variables";
-@import "./navigation";
 @import "./hero";
+@import "./navigation";
 @import "./styles";
+// reordering the scss with var on top and nav on bottom fixes issue
 
 // adds specificity to override the HTML
 html body {
@@ -42,6 +42,7 @@ p {
 .mb-5 {
   margin-bottom: 5rem;
 }
+
 // overlay for images
 .overlay::before {
   z-index: 1;

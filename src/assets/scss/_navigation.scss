@@ -204,6 +204,9 @@
         padding-top: 20px;
       }
 
+      .mb-5 {
+        margin-bottom: 20px;
+      }
       // only activates when it has menu-content-container AND active class on the same element
       &.active {
         left: 0px;
