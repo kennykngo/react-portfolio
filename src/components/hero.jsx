@@ -58,15 +58,15 @@ const Hero = () => {
                                     {logoLinks.map((link, index) => (
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
-                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert}}/></a>
+                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert, fill: "#ffffff", fill: "#fff"}}/></a>
                                         </li>
                                     ))}
                                 </ul>
-                                <p>
+                                <p style={{fontWeight: state.theme.pFontWeight}}>
                                     Recently graduated front-end web developer seeking to marry both my design degree, from San Francisco State University, and full-stack development certificate, from University of California, Berkeley Extension. Equipped with skills in JavaScript, React.js, CSS, NodeJS, and responsive web design, my passion is shown when tackling various mobile-first projects. Through my self-motivation and problem-solving aptitude in addition to my passion for web-development skills such as object-oriented principles and debugging, I will excel as part of a fast-paced, goal-driven team. 
                                 </p>
                                 
-                            </div>
+                            </div>          
                         </Col>
             </Row>
         </div>

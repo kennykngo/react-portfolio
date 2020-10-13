@@ -9,27 +9,29 @@ export default function ToggleTheme() {
 	const Button = styled.button`
     text-decoration: none;
     cursor: pointer;
-    // background-color: #ffffff;
     position: relative;
     overflow: hidden;
     transition: background 400ms;
+    background-color: state.theme.primaryBtn;
     outline: 0;
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
 
 		&:active { 
 			text-decoration: none;
-		}
+    }
+    
+    &:hover { 
+      // background-color: rgb(0,122,255);
+      box-shadow: 0px 0px 5px #1890ff; 
+      // color: #f8f9fa;
+    }
 	`;
 
   const state = useContext(ThemeContext);
 
   const btn = {
-    // color: state.theme.textOnSecondary,
-	// marginTop: '70px',
 	backgroundColor: state.theme.primary,
-	// color: state.theme.secondary,
-
   }
 
   return (

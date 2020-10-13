@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Radium from "radium";
+import color from "color";
 
 export const ThemeContext = React.createContext({
   theme: {
@@ -14,16 +16,21 @@ export const ThemeContextProvider = props => {
     light: {
       type: 'light',
       primary: '#f8f9fa',
+      primaryBtn: '#f8f9fa',
       text: '#444444',
       primaryNav: "#ffffff",
       invert: "invert(0.25)",
+      pFontWeight: "1",
+
     },
     dark:{
       type: 'dark',
       primary: '#212121',
+      primaryBtn: '#212121',
       text: '#ccc',
       primaryNav: "#121212",
       invert: "invert(0.75)",
+      pFontWeight: "51",
     },
   }
 

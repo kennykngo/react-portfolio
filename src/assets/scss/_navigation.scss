@@ -36,6 +36,11 @@
     align-items: center;
     padding-right: 30px;
 
+    .mb-5 {
+      &:hover {
+        background-color: #1890ff;
+      }
+    }
     .menu-avatar-name {
       font-size: 18px;
       margin-left: 18px;
