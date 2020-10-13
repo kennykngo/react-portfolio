@@ -25,7 +25,6 @@ function App() {
             <Route path="/" render={()=> <Redirect to="/home" />} />
             <Route component={() => 404} />
           </Switch>
-          <ToggleTheme />
           <Hero />
       
         {/* </div> */}

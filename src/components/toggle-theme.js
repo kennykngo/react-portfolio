@@ -1,18 +1,28 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from './theme-provider'
+import React, { useContext, useState } from 'react'
+import { ThemeContext } from './theme-provider';
+import styled from "styled-components"
 
-function ToggleTheme() {
-  const state = useContext(ThemeContext)
+export default function ToggleTheme() {
+
+	const Button = styled.button`
+	border-radius: 12px 2px 12px 2px;
+	`;
+
+  const state = useContext(ThemeContext);
 
   const btn = {
     color: state.theme.textOnSecondary,
-    marginTop: '70px',
-    marginBottom: '70px',
-    background: state.theme.secondary
+	// marginTop: '70px',
+	
+	background: state.theme.secondary,
+
+
+
+
   }
 
   return (
-    <button
+    <Button
       variant='contained'
       onClick={() => {
         state.setTheme(state.theme.type)
@@ -20,8 +30,7 @@ function ToggleTheme() {
       style={btn}
     >
       Toggle Theme
-    </button>
+    </Button>
   )
 }
 
-export default ToggleTheme
