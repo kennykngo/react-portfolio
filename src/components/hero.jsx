@@ -18,7 +18,7 @@ const logoLinks = [
     {
         alt: "behance",
         src: behanceLogo,
-        path: "https://behance.com/kennykngo",
+        path: "https://behance.net/kennyngo",
     },
     {
         alt: "linkedin",
