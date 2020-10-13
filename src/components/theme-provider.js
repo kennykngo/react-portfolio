@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Radium from "radium";
-import color from "color";
 
 export const ThemeContext = React.createContext({
   theme: {

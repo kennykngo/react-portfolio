@@ -6,13 +6,15 @@ import { ThemeContext } from './theme-provider';
 
 export default function ToggleTheme() {
 
+  const state = useContext(ThemeContext);
+
 	const Button = styled.button`
     text-decoration: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: background 400ms;
-    background-color: state.theme.primaryBtn;
+    background-color: ${state.theme.primary} ;
     outline: 0;
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
@@ -22,17 +24,14 @@ export default function ToggleTheme() {
     }
     
     &:hover { 
-      // background-color: rgb(0,122,255);
-      box-shadow: 0px 0px 5px #1890ff; 
-      // color: #f8f9fa;
+      background-color: #1890ff;
+      color: #f8f9fa;
     }
-	`;
+    `;
 
-  const state = useContext(ThemeContext);
-
-  const btn = {
-	backgroundColor: state.theme.primary,
-  }
+  // const btn = {
+	// backgroundColor: state.theme.primary,
+  // }
 
   return (
     <Button
@@ -41,7 +40,7 @@ export default function ToggleTheme() {
       onClick={() => {
         state.setTheme(state.theme.type)
       }}
-      style={btn}
+      // style={btn}
     >
       Toggle Theme
     </Button>
