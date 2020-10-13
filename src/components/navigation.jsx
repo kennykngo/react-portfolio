@@ -1,5 +1,6 @@
-import React, { useState, useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
+
 import { ThemeContext } from "./theme-provider";
 import ToggleTheme from "./toggle-theme";
 
@@ -25,7 +26,7 @@ export default function Navigation ({user}) {
     const state = useContext(ThemeContext);
 
     const navBar = {
-        backgroundColor: state.theme.primary,
+        backgroundColor: state.theme.primaryNav,
         color: state.theme.text
     }
 

@@ -14,12 +14,14 @@ export const ThemeContextProvider = props => {
     light: {
       type: 'light',
       primary: '#f8f9fa',
-      text: 'black'
+      text: '#444444',
+      primaryNav: "#ffffff",
     },
     dark:{
       type: 'dark',
       primary: '#212121',
-      text: '#ccc'
+      text: '#ccc',
+      primaryNav: "#121212",
     },
   }
 
