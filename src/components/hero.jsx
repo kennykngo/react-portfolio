@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Row } from "react-flexbox-grid";
 import { Link } from "react-router-dom";
 
@@ -28,13 +28,15 @@ const logoLinks = [
 ]
 
 const Hero = () => {
-
+    
     const state = useContext(ThemeContext);
     const heroStyle = {
         backgroundColor: state.theme.primary,
         color: state.theme.text,
     }
 
+    // const [darkMode, setDarkMode] = useState("light");
+    
     return (
     <div className="hero" style={heroStyle}>
         <div className="wrapper">
@@ -56,7 +58,7 @@ const Hero = () => {
                                     {logoLinks.map((link, index) => (
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
-                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle}/></a>
+                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert}}/></a>
                                         </li>
                                     ))}
                                 </ul>

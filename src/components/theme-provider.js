@@ -16,12 +16,14 @@ export const ThemeContextProvider = props => {
       primary: '#f8f9fa',
       text: '#444444',
       primaryNav: "#ffffff",
+      invert: "invert(0.25)",
     },
     dark:{
       type: 'dark',
       primary: '#212121',
       text: '#ccc',
       primaryNav: "#121212",
+      invert: "invert(0.75)",
     },
   }
 
