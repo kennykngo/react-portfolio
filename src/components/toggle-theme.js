@@ -5,7 +5,11 @@ import styled from "styled-components"
 export default function ToggleTheme() {
 
 	const Button = styled.button`
-	border-radius: 12px 2px 12px 2px;
+		border-radius: 12px 2px 12px 2px;
+
+		&:active { 
+			
+		}
 	`;
 
   const state = useContext(ThemeContext);
@@ -15,9 +19,6 @@ export default function ToggleTheme() {
 	// marginTop: '70px',
 	
 	background: state.theme.secondary,
-
-
-
 
   }
 
