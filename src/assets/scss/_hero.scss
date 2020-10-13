@@ -16,6 +16,11 @@
     padding-top: 10px;
   }
 
+  a {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
   .hero-image {
     width: 200px;
     // max-width: 275px;
@@ -34,6 +39,21 @@
       margin-left: -25%;
       height: 100%;
       // width: auto;
+    }
+  }
+
+  .logo-images {
+    display: flex;
+    padding-inline-start: 0;
+
+    li {
+      padding-inline-end: 20px;
+      list-style-type: none;
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
     }
   }
 }

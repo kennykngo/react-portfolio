@@ -1,8 +1,31 @@
 import React, { useContext } from "react";
 import { Col, Row } from "react-flexbox-grid";
+import { Link } from "react-router-dom";
 
 import HeroImage from "../assets/images/_DSC0459-2.jpg"
 import { ThemeContext } from "./theme-provider";
+
+import linkedInLogo from "../assets/images/logos/linkedin.svg"
+import behanceLogo from "../assets/images/logos/behance.svg"
+import githubLogo from "../assets/images/logos/github.svg"
+
+const logoLinks = [
+    {
+        alt: "github",
+        src: githubLogo,
+        path: "https://github.com/kennykngo",
+    },
+    {
+        alt: "behance",
+        src: behanceLogo,
+        path: "https://behance.com/kennykngo",
+    },
+    {
+        alt: "linkedin",
+        src: linkedInLogo,
+        path: "https://linkedin.com/in/kenny-ngo",
+    },
+]
 
 const Hero = () => {
 
@@ -16,8 +39,6 @@ const Hero = () => {
     <div className="hero" style={heroStyle}>
         <div className="wrapper">
             <Row>
-                {/* <Col xs={12} lg={10}>
-                    <Row around="lg"> */}
                         <Col lg={4}>
                             <div className="hero-image">
                                 <img src={HeroImage} alt="hero" />
@@ -30,15 +51,21 @@ const Hero = () => {
                                 </h1>
                                 <h4 style={heroStyle}>
                                     kenny.ngo.design@gmail.com · (415)716-1608
-                                    </h4>
+                                </h4>
+                                <ul className="logo-images">
+                                    {logoLinks.map((link, index) => (
+                                        <li key={index} >
+                                            {/* Do not use Link since it will load to the same page */}
+                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle}/></a>
+                                        </li>
+                                    ))}
+                                </ul>
                                 <p>
                                     Recently graduated front-end web developer seeking to marry both my design degree, from San Francisco State University, and full-stack development certificate, from University of California, Berkeley Extension. Equipped with skills in JavaScript, React.js, CSS, NodeJS, and responsive web design, my passion is shown when tackling various mobile-first projects. Through my self-motivation and problem-solving aptitude in addition to my passion for web-development skills such as object-oriented principles and debugging, I will excel as part of a fast-paced, goal-driven team. 
                                 </p>
                                 
                             </div>
                         </Col>
-                    {/* </Row>
-                </Col> */}
             </Row>
         </div>
     </div>
