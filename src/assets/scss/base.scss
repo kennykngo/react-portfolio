@@ -3,8 +3,9 @@
 @import "./navigation";
 @import "./styles";
 @import "./tag-row";
-// reordering the scss with var on top and nav on bottom fixes issue
+@import "./post-masonry";
 
+// reordering the scss with var on top and nav on bottom fixes issue
 // adds specificity to override the HTML
 html body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
