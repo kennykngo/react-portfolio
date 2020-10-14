@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Col, Row } from "react-flexbox-grid";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import HeroImage from "../assets/images/_DSC0459-2.jpg"
 import { ThemeContext } from "./theme-provider";
@@ -35,6 +35,15 @@ const Hero = () => {
         color: state.theme.text,
     }
 
+    const A = styled.a`
+        color: ${state.theme.text};
+
+        &:hover {
+            box-shadow: ${state.theme.hover}
+        }
+    `;
+
+
     // const [darkMode, setDarkMode] = useState("light");
     
     return (
@@ -58,7 +67,7 @@ const Hero = () => {
                                     {logoLinks.map((link, index) => (
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
-                                            <a href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert, fill: "#ffffff", fill: "#fff"}}/></a>
+                                            <A href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert, fill: "#ffffff", fill: "#fff"}}/></A>
                                         </li>
                                     ))}
                                 </ul>

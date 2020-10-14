@@ -17,7 +17,7 @@ export default function ToggleTheme() {
     background-color: ${state.theme.primary} ;
     outline: 0;
     border-radius: 0.25rem;
-    // box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
 
 		&:active { 
 			text-decoration: none;

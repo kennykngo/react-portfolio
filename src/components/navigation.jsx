@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { ThemeContext } from "./theme-provider";
 import ToggleTheme from "./toggle-theme";
@@ -25,6 +26,14 @@ export default function Navigation ({user}) {
 
     const state = useContext(ThemeContext);
 
+    const Links = styled(Link)`
+        color: ${state.theme.text};
+
+        &:hover {
+            color: ${state.theme.hover}
+        }
+    `;
+
     const navBar = {
         backgroundColor: state.theme.primaryNav,
         color: state.theme.text
@@ -41,7 +50,12 @@ export default function Navigation ({user}) {
                 <ul>
                     {navLinks.map((link, index) => (
                         <li key={index}  > 
-                            <Link style={navBar} to={link.path}>{link.title}</Link>
+                            <Links 
+                                // style={{color: state.theme.text}} 
+                                to={link.path}
+                                >
+                                    {link.title}
+                            </Links>
                         </li>
                     ))}
                 </ul>
