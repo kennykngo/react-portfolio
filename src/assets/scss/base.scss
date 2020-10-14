@@ -4,6 +4,8 @@
 @import "./styles";
 @import "./tag-row";
 @import "./post-masonry";
+@import "./home.scss";
+@import "./post-grid";
 
 // reordering the scss with var on top and nav on bottom fixes issue
 // adds specificity to override the HTML
