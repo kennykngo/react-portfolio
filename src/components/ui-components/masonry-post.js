@@ -1,5 +1,5 @@
 import React from 'react';
-import { TagRow } from "./tag-row";
+import { TagRow } from "./";
 
 export default function MasonryPost ({post, tagsOnTop }) {
 	const windowWidth = window.innerWidth;
@@ -11,9 +11,11 @@ export default function MasonryPost ({post, tagsOnTop }) {
 
 	return ( 
 		<a href={post.deployLink} className="masonry-post overlay" style={style}>
-			<TagRow tags={post.categories} /> 
-			<h2>{post.title}</h2>
-			<p>{post.description}</p>
+			<div className="image-text">
+				<TagRow tags={post.categories} /> 
+				<h2>{post.title}</h2>
+				<p>{post.description}</p>
+			</div>
 		</a>
 	)
 }

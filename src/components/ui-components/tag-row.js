@@ -7,7 +7,7 @@ export default function TagRow({ tags }) {
 			{tags.map((tag, index) => (
 				<span key={index} className="tag" style={{backgroundColor: categoryColors[tag]}}
 				>
-					{tags.toUpperCase()}
+					{tag.toUpperCase()}
 				</span>
 			))}
 		</div>
