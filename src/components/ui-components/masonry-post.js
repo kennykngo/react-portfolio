@@ -10,8 +10,10 @@ export default function MasonryPost ({post, tagsOnTop }) {
 	const style = windowWidth > 900 ? { ...postImage, ...post.style} : postImage;
 
 	return ( 
-		<div>
-			<h1>hi</h1>
-		</div>
+		<a href={post.deployLink} className="masonry-post overlay" style={style}>
+			<TagRow tags={post.categories} /> 
+			<h2>{post.title}</h2>
+			<p>{post.description}</p>
+		</a>
 	)
 }
