@@ -21,7 +21,6 @@ function App() {
       <ThemeContextProvider> 
         {/* <div className="App"> */}
           <Navigation />
-          <Projects />
           {/* <ProjectsComp deployLink="https://google.com" title="COVID Dashboard"  /> */}
           <Switch>
             <Route path="/page" component={PageRenderer} />
@@ -29,6 +28,7 @@ function App() {
             <Route component={() => 404} />
           </Switch>
           <Hero />
+          <Projects />
       
         {/* </div> */}
       </ThemeContextProvider> 
