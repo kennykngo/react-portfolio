@@ -6,7 +6,7 @@ import { Hero, Navigation } from "./components/index.jsx"
 
 import "./assets/scss/base.scss"
 import { ThemeContextProvider } from './components/theme-provider';
-import ToggleTheme from "./components/toggle-theme";
+import {ProjectsComp} from "./components/ui-components"
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
       <ThemeContextProvider> 
         {/* <div className="App"> */}
           <Navigation />
+          <ProjectsComp deployLink="https://google.com" title="COVID Dashboard"  />
           <Switch>
             <Route path="/page" component={PageRenderer} />
             <Route path="/" render={()=> <Redirect to="/home" />} />
