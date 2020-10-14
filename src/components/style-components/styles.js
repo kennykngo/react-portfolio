@@ -6,6 +6,7 @@ const categoryColors = {
 	React: "rgb(64,156, 255)",
 	JavaScript: "rgb(255,179,64)",
 	SCSS: "rgb(175, 82,250)",
+	MongoDB: "rgb(175, 82,250)",
 };
 
 export { categoryColors };
