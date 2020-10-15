@@ -1,19 +1,19 @@
 import React, {useContext} from 'react';
 import {ThemeContextProvider} from "./theme-provider";
-import { MasonryPost, PostMasonry } from "../components/ui-components";
+import { MasonryPost, PostMasonry, PostGrid } from "../components/ui-components";
 import projects from "../assets/posts/projects-post"
 
 const projectsConfig = {
 	1 : {
-		gridArea: "1 / 2/ 3/3",
+		gridArea: "1 / 2/ 3/ 3",
 	}
 }
 
-const mergeStyles =function (posts, config) {
+const mergeStyles = function (posts, config) {
 	posts.forEach((post, index) => {
 		post.style = config[index];
 		post.author = "Kenny Ngo";
-		post.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt ";
+		// post.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt ";
 	})
 }
 
@@ -26,7 +26,8 @@ export default function Projects () {
 
 	return (
 		<div> 
-			<PostMasonry posts={projects} columns={2} />
+			<PostGrid posts={projects} columns={2} />
+			{/* <MasonryPost post={projects} /> */}
 		</div>
 	) 
 }

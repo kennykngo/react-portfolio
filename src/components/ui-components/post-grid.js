@@ -1,6 +1,6 @@
 import React, {useState, useMemo, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { Pagination } from "antd";
+// import { Pagination } from "antd";
 import { TagRow } from "./"
 
 export default function PostGrid({ posts }) {
@@ -58,7 +58,7 @@ export default function PostGrid({ posts }) {
 			</div>
 		  ))}
 		</section>
-		<Pagination
+		{/* <Pagination
 		  simple
 		  showSizeChanger
 		  onShowSizeChange={setPageSize}
@@ -66,7 +66,7 @@ export default function PostGrid({ posts }) {
 		  total={posts.length}
 		  defaultCurrent={current}
 		  onChange={setCurrent}
-		/>
+		/> */}
 	  </section>
 	);
   }
