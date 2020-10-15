@@ -19,18 +19,20 @@ export const ThemeContextProvider = props => {
       primaryNav: "#ffffff",
       invert: "invert(0.25)",
       pFontWeight: "1",
-      hover: "0px 0px 50px #f8f9fa"
+      hover: "0px 0px 50px #f8f9fa",
+      card: "#f8f9fa"
 
     },
     dark:{
       type: 'dark',
-      primary: '#212121',
-      primaryBtn: '#212121',
+      primary: '#333333',
+      primaryBtn: '#333333',
       text: '#ccc',
       primaryNav: "#121212",
       invert: "invert(0.75)",
       pFontWeight: "51",
-      hover: "#f8f9fa"
+      hover: "#f8f9fa",
+      card: "#212121"
     },
   }
 

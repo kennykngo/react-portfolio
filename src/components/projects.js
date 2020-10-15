@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import {ThemeContextProvider} from "./theme-provider";
 import { MasonryPost, PostMasonry, PostGrid } from "../components/ui-components";
 import projects from "../assets/posts/projects-post";
 

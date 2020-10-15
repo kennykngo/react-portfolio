@@ -1,6 +1,7 @@
-import React, {useState, useMemo,  } from 'react';
-import {ThemeContextProvider} from "../theme-provider";
+import React, {useState, useMemo, useContext } from 'react';
+import {ThemeContext} from "../theme-provider";
 import { TagRow, ProjectsComp } from "./";
+import styled from "styled-components"
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
@@ -20,11 +21,33 @@ export default function PostGrid({ posts }) {
 	  [current, pageSize, posts]
 	);
 
+	const state = useContext(ThemeContext);
+
+	const projectStyle = {
+		backgroundColor: state.theme.primary,
+		color: state.theme.text,
+	}
+
+	const cardStyle = { 
+		backgroundColor: state.theme.primaryNav,
+	}
+
+	const textStyle = {
+		color: state.theme.text,
+	}
+	// const A = styled.a`
+	// 	color: ${state.theme.text};
+
+	// 	&:hover {
+	// 		box-shadow: ${state.theme.hover}
+	// 	}
+	// `;
+
 	return (
-	  <section className="grid-pagination-container">
+	  <section className="grid-pagination-container" style={projectStyle}>
 		<section className="post-grid container">
 		  {paginatedPosts.map((post, index) => (
-			<div className="post-container">
+			<div className="post-container" style={cardStyle}>
 			  <figure>
 				<a href={post.deployLink}>
 				  <img
@@ -35,10 +58,10 @@ export default function PostGrid({ posts }) {
 			  </figure>
 					<TagRow tags={post.categories} />
 				<div className="d-flex justify-content-between align-baseline">
-			  		<h2>{post.title}</h2>
-					<ProjectsComp githubLink={post.githubLink} />
+			  		<h2 style={textStyle}>{post.title}</h2>
+					<ProjectsComp styling={{backgroundColor: "transparent", filter: state.theme.invert}} githubLink={post.githubLink} />
 				</div>
-			  <h4>{post.description}</h4>
+			  <h4 style={textStyle}>{post.description}</h4>
 			  <p className="description-text">{post.point}</p>
 			</div>
 		  ))}
