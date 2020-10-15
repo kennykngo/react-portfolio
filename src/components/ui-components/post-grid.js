@@ -38,25 +38,19 @@ export default function PostGrid({ posts }) {
 		  {paginatedPosts.map((post, index) => (
 			<div className="post-container">
 			  <figure>
-				<Link to={post.link}>
+				<a href={post.deployLink}>
 				  <img
 					src={require(`../../assets/images/${post.image}`)}
 					alt={post.image}
 				  />
-				</Link>
+				</a>
 			  </figure>
-				<div className="d-flex justify-content-between">
 					<TagRow tags={post.categories} />
+				<div className="d-flex justify-content-between align-baseline">
+			  		<h2>{post.title}</h2>
 					<ProjectsComp githubLink={post.githubLink} />
 				</div>
-			  <h2>{post.title}</h2>
-			  <p className="author-text">
-				<span>
-				  By:
-				  <Link to={`/author/${post.author}`}>{post.author}</Link>
-				</span>
-			  </p>
-			  <p className="description-text">{post.description}</p>
+			  <h4>{post.description}</h4>
 			  <p className="description-text">{post.point}</p>
 			</div>
 		  ))}

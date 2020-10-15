@@ -12,7 +12,7 @@ const projectsConfig = {
 const mergeStyles = function (posts, config) {
 	posts.forEach((post, index) => {
 		post.style = config[index];
-		post.author = "Kenny Ngo";
+		// post.author = "Kenny Ngo";
 		// post.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt ";
 	})
 }
