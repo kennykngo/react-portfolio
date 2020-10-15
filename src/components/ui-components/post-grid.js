@@ -1,8 +1,6 @@
-import React, {useState, useMemo, useEffect } from 'react';
-import { Link } from "react-router-dom";
-// import { Pagination } from "antd";
+import React, {useState, useMemo,  } from 'react';
+import {ThemeContextProvider} from "../theme-provider";
 import { TagRow, ProjectsComp } from "./";
-
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
@@ -21,17 +19,7 @@ export default function PostGrid({ posts }) {
 	  // passes dependencies to the function to know when to update itself (changing current page or pageSize);
 	  [current, pageSize, posts]
 	);
-  
-	// scrolls back after pagination change
-	// use useEffect() when mounting a component
-	useEffect(() => {
-	  window.scroll({
-		top: 500,
-		left: 0,
-		behavior: "smooth",
-	  });
-	}, [current, pageSize]);
-  
+
 	return (
 	  <section className="grid-pagination-container">
 		<section className="post-grid container">

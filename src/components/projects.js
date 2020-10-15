@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import {ThemeContextProvider} from "./theme-provider";
 import { MasonryPost, PostMasonry, PostGrid } from "../components/ui-components";
-import projects from "../assets/posts/projects-post"
+import projects from "../assets/posts/projects-post";
+
 
 const projectsConfig = {
 	1 : {
@@ -12,8 +12,6 @@ const projectsConfig = {
 const mergeStyles = function (posts, config) {
 	posts.forEach((post, index) => {
 		post.style = config[index];
-		// post.author = "Kenny Ngo";
-		// post.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt ";
 	})
 }
 
