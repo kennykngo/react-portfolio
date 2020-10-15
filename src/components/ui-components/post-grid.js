@@ -2,6 +2,8 @@ import React, {useState, useMemo, useContext } from 'react';
 import {ThemeContext} from "../theme-provider";
 import { TagRow, ProjectsComp } from "./";
 import styled from "styled-components"
+import { Row, Col } from 'react-flexbox-grid';
+
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
@@ -29,12 +31,12 @@ export default function PostGrid({ posts }) {
 	}
 
 	const cardStyle = { 
-		backgroundColor: state.theme.primaryNav,
+		backgroundColor: state.theme.card,
 	}
 
 	const headingStyle = {
 		color: state.theme.text,
-		
+
 	}
 
 	const textStyle = {
@@ -51,7 +53,18 @@ export default function PostGrid({ posts }) {
 
 	return (
 	  <section className="grid-pagination-container" style={projectStyle}>
+		<div className="wrapper">
+			<Row start="xs" center="lg">
+				<Col lg={4}>
+					<h1 className="font-weight-800 font-60" style={headingStyle}>Projects</h1>
+				</Col>
+				<Col md={12} lg={5}>
+					<p></p>
+				</Col>
+			</Row>
+		</div>
 		<section className="post-grid container">
+
 		  {paginatedPosts.map((post, index) => (
 			<div className="post-container" style={cardStyle}>
 			  <figure>
