@@ -6,6 +6,7 @@
 @import "./post-masonry";
 @import "./home.scss";
 @import "./post-grid";
+@import "./projects-comp";
 
 // reordering the scss with var on top and nav on bottom fixes issue
 // adds specificity to override the HTML
@@ -59,4 +60,12 @@ p {
     rgba(0, 0, 0, 0.8) 99%,
     rgba(0, 0, 0, 0.8) 100%
   );
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }

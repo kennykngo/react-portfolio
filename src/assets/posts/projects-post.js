@@ -18,12 +18,12 @@ export default [
 		categories: ["MongoDB", "JavaScript"],
 	},
 	{
-		title: "Mumble",
-		description: "The Dating App for Introverts",
-		point: "A mobile-first designed app that pairs individuals based on a complex algorithm.",
+		title: "Weather Dashboard",
+		description: "Track the weather.",
+		point: "Displays weather, AQI, wind-speed, etc. of the city you select.",
 		githubLink: "https://github.com/kennykngo/dating-app",
 		deployLink: "https://mumble-dating-app.herokuapp.com/",
-		image: "mumble-app.png",
-		categories: ["React", "MongoDB", "JavaScript"],
+		image: "weather-dashboard.png",
+		categories: ["HTML", "CSS", "JavaScript"],
 	}
 ]

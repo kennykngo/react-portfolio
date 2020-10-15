@@ -1,7 +1,8 @@
 import React, {useState, useMemo, useEffect } from 'react';
 import { Link } from "react-router-dom";
 // import { Pagination } from "antd";
-import { TagRow } from "./"
+import { TagRow, ProjectsComp } from "./";
+
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
@@ -44,29 +45,22 @@ export default function PostGrid({ posts }) {
 				  />
 				</Link>
 			  </figure>
-			  <TagRow tags={post.categories} />
+				<div className="d-flex justify-content-between">
+					<TagRow tags={post.categories} />
+					<ProjectsComp githubLink={post.githubLink} />
+				</div>
 			  <h2>{post.title}</h2>
 			  <p className="author-text">
 				<span>
 				  By:
 				  <Link to={`/author/${post.author}`}>{post.author}</Link>
 				</span>
-				<span> — {post.date}</span>
 			  </p>
 			  <p className="description-text">{post.description}</p>
-			  <Link to={post.link}>Read More...</Link>
+			  <p className="description-text">{post.point}</p>
 			</div>
 		  ))}
 		</section>
-		{/* <Pagination
-		  simple
-		  showSizeChanger
-		  onShowSizeChange={setPageSize}
-		  pageSize={pageSize}
-		  total={posts.length}
-		  defaultCurrent={current}
-		  onChange={setCurrent}
-		/> */}
 	  </section>
 	);
   }

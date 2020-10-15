@@ -3,9 +3,9 @@ import githubLogo from "../../assets/images/logos/github.svg"
 
 export default function ProjectsComp ( props ) {
 	return (
-		<div>
+		<span className="github-link-container">
 			{/* <h2>{props.title}</h2> */}
-			<a href={props.deployLink}><img src={githubLogo} alt="github-logo"/></a>
-		</div>
+			<a href={props.githubLink}><img src={githubLogo} alt="github-logo"/></a>
+		</span>
 	)
 };
