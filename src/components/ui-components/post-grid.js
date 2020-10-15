@@ -32,9 +32,15 @@ export default function PostGrid({ posts }) {
 		backgroundColor: state.theme.primaryNav,
 	}
 
-	const textStyle = {
+	const headingStyle = {
 		color: state.theme.text,
+		
 	}
+
+	const textStyle = {
+		fontWeight: state.theme.pFontWeight
+	}
+
 	// const A = styled.a`
 	// 	color: ${state.theme.text};
 
@@ -58,11 +64,11 @@ export default function PostGrid({ posts }) {
 			  </figure>
 					<TagRow tags={post.categories} />
 				<div className="d-flex justify-content-between align-baseline">
-			  		<h2 style={textStyle}>{post.title}</h2>
+			  		<h2 style={headingStyle}>{post.title}</h2>
 					<ProjectsComp styling={{backgroundColor: "transparent", filter: state.theme.invert}} githubLink={post.githubLink} />
 				</div>
-			  <h4 style={textStyle}>{post.description}</h4>
-			  <p className="description-text">{post.point}</p>
+			  <h4 style={headingStyle}>{post.description}</h4>
+			  <p style={textStyle} className="description-text">{post.point}</p>
 			</div>
 		  ))}
 		</section>
