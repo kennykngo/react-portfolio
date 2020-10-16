@@ -1,14 +1,17 @@
 import React, { useContext, useMemo, useState } from 'react';
 import { Col, Row } from 'react-flexbox-grid';
-import styled from "styled-components"
+import styled from "styled-components";
 
 import { ThemeContext } from "../theme-provider";
 import { ProjectsComp, TagRow } from "./";
+import { useMediaQuery } from "./useMediaQuery";
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
 	const [pageSize, setPageSize] = useState(9);
 	const [current, setCurrent] = useState(1);
+
+	const is900Width = useMediaQuery('(min-width: 992px)');
   
 	// placing posts in section: renders a subset of array of posts by useMemo()
 	// only update when page size changes or page changes
@@ -35,8 +38,10 @@ export default function PostGrid({ posts }) {
 	}
 
 	const headingStyle = {
-		color: state.theme.text,
-
+		container: is900Width => ({
+			color: state.theme.text,
+			marginLeft: is900Width && "-4rem"
+		})
 	}
 
 	const textStyle = {
@@ -56,7 +61,7 @@ export default function PostGrid({ posts }) {
 		<div className="wrapper">
 			<Row start="xs" center="lg">
 				<Col lg={4}>
-					<h1 className={`font-weight-800 font-60 ${window.innerWidth > 900 && "ml--5"}`} style={headingStyle}>Projects</h1>
+					<h1 className="font-weight-800 font-60" style={headingStyle, headingStyle.container(is900Width)}>Projects</h1>
 				</Col>
 				<Col md={12} lg={5}>
 					<p></p>
