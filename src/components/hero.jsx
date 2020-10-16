@@ -5,24 +5,24 @@ import styled from "styled-components";
 import HeroImage from "../assets/images/_DSC0459-2.jpg"
 import { ThemeContext } from "./theme-provider";
 
-import linkedInLogo from "../assets/images/logos/linkedin.svg"
-import behanceLogo from "../assets/images/logos/behance.svg"
-import githubLogo from "../assets/images/logos/github.svg"
+// import linkedInLogo from "../assets/images/logos/linkedin.svg"
+// import behanceLogo from "../assets/images/logos/behance.svg"
+// import githubLogo from "../assets/images/logos/github.svg"
 
 const logoLinks = [
     {
         alt: "github",
-        src: githubLogo,
+        src: "fa-github-square",
         path: "https://github.com/kennykngo",
     },
     {
         alt: "behance",
-        src: behanceLogo,
+        src: "fa-behance-square",
         path: "https://behance.net/kennyngo",
     },
     {
         alt: "linkedin",
-        src: linkedInLogo,
+        src: "fa-linkedin",
         path: "https://linkedin.com/in/kenny-ngo",
     },
 ]
@@ -67,7 +67,10 @@ const Hero = () => {
                                     {logoLinks.map((link, index) => (
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
-                                            <A href={link.path} > <img src={`${link.src}`} alt={link.alt} style={heroStyle, {backgroundColor: "transparent", filter: state.theme.invert, fill: "#ffffff", fill: "#fff"}}/></A>
+                                            <A href={link.path} > 
+                                                <i size={30} className={`fab ${link.src}`} style={heroStyle, {backgroundColor: "transparent"}}>
+                                                </i>
+                                            </A>
                                         </li>
                                     ))}
                                 </ul>
