@@ -37,11 +37,15 @@ export default function PostGrid({ posts }) {
 		backgroundColor: state.theme.card,
 	}
 
-	const headingStyle = {
+	const h1Style = {
 		container: is900Width => ({
 			color: state.theme.text,
 			marginLeft: is900Width && "-4rem"
 		})
+	}
+
+	const headingStyle = {
+		color: state.theme.text,
 	}
 
 	const textStyle = {
@@ -62,7 +66,7 @@ export default function PostGrid({ posts }) {
 		<div className="wrapper">
 			<Row start="xs" center="lg">
 				<Col lg={4}>
-					<h1 className="font-weight-800 font-60" style={headingStyle, headingStyle.container(is900Width)}>Projects</h1>
+					<h1 className="font-weight-800 font-60" style={h1Style.container(is900Width)}>Projects</h1>
 				</Col>
 				<Col md={12} lg={5}>
 					<p></p>
