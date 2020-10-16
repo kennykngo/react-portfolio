@@ -1,9 +1,9 @@
-import React, {useState, useMemo, useContext } from 'react';
-import {ThemeContext} from "../theme-provider";
-import { TagRow, ProjectsComp } from "./";
+import React, { useContext, useMemo, useState } from 'react';
+import { Col, Row } from 'react-flexbox-grid';
 import styled from "styled-components"
-import { Row, Col } from 'react-flexbox-grid';
 
+import { ThemeContext } from "../theme-provider";
+import { ProjectsComp, TagRow } from "./";
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
@@ -56,7 +56,7 @@ export default function PostGrid({ posts }) {
 		<div className="wrapper">
 			<Row start="xs" center="lg">
 				<Col lg={4}>
-					<h1 className="font-weight-800 font-60" style={headingStyle}>Projects</h1>
+					<h1 className={`font-weight-800 font-60 ${window.innerWidth > 900 && "ml--5"}`} style={headingStyle}>Projects</h1>
 				</Col>
 				<Col md={12} lg={5}>
 					<p></p>
