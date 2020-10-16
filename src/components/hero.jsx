@@ -5,10 +5,6 @@ import styled from "styled-components";
 import HeroImage from "../assets/images/_DSC0459-2.jpg"
 import { ThemeContext } from "./theme-provider";
 
-// import linkedInLogo from "../assets/images/logos/linkedin.svg"
-// import behanceLogo from "../assets/images/logos/behance.svg"
-// import githubLogo from "../assets/images/logos/github.svg"
-
 const logoLinks = [
     {
         alt: "github",

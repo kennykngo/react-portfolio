@@ -3,7 +3,7 @@ import { Col, Row } from 'react-flexbox-grid';
 import styled from "styled-components";
 
 import { ThemeContext } from "../theme-provider";
-import { ProjectsComp, TagRow } from "./";
+import { TagRow } from "./";
 import { useMediaQuery } from "./useMediaQuery";
 
 export default function PostGrid({ posts }) {
@@ -48,13 +48,14 @@ export default function PostGrid({ posts }) {
 		fontWeight: state.theme.pFontWeight
 	}
 
-	// const A = styled.a`
-	// 	color: ${state.theme.text};
+	const A = styled.a`
+	color: ${state.theme.text};
+	padding-top: "-5px";
 
-	// 	&:hover {
-	// 		box-shadow: ${state.theme.hover}
-	// 	}
-	// `;
+	&:hover {
+		box-shadow: ${state.theme.hover}
+	}
+`;
 
 	return (
 	  <section className="grid-pagination-container" style={projectStyle}>
@@ -80,10 +81,10 @@ export default function PostGrid({ posts }) {
 				  />
 				</a>
 			  </figure>
-					<TagRow tags={post.categories} />
-				<div className="d-flex justify-content-between align-baseline">
+				<TagRow tags={post.categories} />
+				<div className="d-flex justify-content-between align-flex-end">
 			  		<h2 style={headingStyle}>{post.title}</h2>
-					<ProjectsComp styling={{backgroundColor: "transparent", filter: state.theme.invert}} githubLink={post.githubLink} />
+					<A href={post.githubLink}><i class="fab fa-github-square fa-2x"/></A>
 				</div>
 			  <h4 style={headingStyle}>{post.description}</h4>
 			  <p style={textStyle} className="description-text">{post.point}</p>
