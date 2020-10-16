@@ -68,7 +68,7 @@ const Hero = () => {
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
                                             <A href={link.path} > 
-                                                <i size={30} className={`fab ${link.src}`} style={heroStyle, {backgroundColor: "transparent"}}>
+                                                <i className={`fab ${link.src} fa-3x`} style={heroStyle, {backgroundColor: "transparent"}}>
                                                 </i>
                                             </A>
                                         </li>

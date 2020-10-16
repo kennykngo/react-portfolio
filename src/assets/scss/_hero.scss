@@ -46,15 +46,16 @@
     padding-inline-start: 0;
 
     li {
-      padding-inline-end: 20px;
-      padding-block-end: 10px;
+      padding-inline-end: 30px;
+      padding-block-end: 20px;
       list-style-type: none;
     }
 
-    img {
-      width: 2rem;
-      height: 2rem;
-      background-color: transparent;
+    .fa-linkedin,
+    .fa-github-square,
+    .fa-behance-square {
+      width: 100%;
+      // height: 2rem;
     }
   }
 }
