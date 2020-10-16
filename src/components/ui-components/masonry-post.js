@@ -1,7 +1,7 @@
 import React from 'react';
 import { TagRow } from "./";
 
-export default function MasonryPost ({post, tagsOnTop }) {
+export default function MasonryPost ({post}) {
 	const windowWidth = window.innerWidth;
 	const postImage = {
 		backgroundImage: `url("${require(`../../assets/images/${post.image}`)}")`,
