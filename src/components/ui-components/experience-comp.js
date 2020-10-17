@@ -17,7 +17,7 @@ export default function ExperienceComp (props) {
 	}
 
 	const dateStyle = {
-		color: "rgb(255,45,85)"
+		color: "#2997ff"
 	}
 
 	return(

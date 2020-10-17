@@ -27,8 +27,11 @@ export default function Experience () {
 
 	return (
 		<div style={expStyle}>
-			<Masonry breakpointCols={experienceBreakpoints} className="my-masonry-grid"
-  columnClassName="my-masonry-grid_column">
+			<Masonry 
+				breakpointCols={experienceBreakpoints} 
+				className="my-masonry-grid"
+				columnClassName="my-masonry-grid_column"
+			>
 				{experiencePosts.map((post) => 
 				<ExperienceComp 
 					title={post.title} 
