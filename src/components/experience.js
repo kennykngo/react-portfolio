@@ -17,19 +17,29 @@ export default function Experience () {
 		margin: "0 auto",
 		display: "flex",
 		justifyContent: "center",
+		flexDirection: "column",
+	}
+
+	const h1Style = {
+		container: is900Width => ({
+			fontWeight: 800,
+			color: state.theme.text,
+			fontSize: "60px",
+			marginLeft: is900Width && "-4rem",
+		})
 	}
 
 	const experiencePosts = [...experience];
 
 	const experienceBreakpoints = {
 		default: 3,
-		// 1100: 3,
 		992: 2,
 		686: 1
 	}
 
 	return (
 		<div style={expStyle}>
+			<h1 style={h1Style.container(is900Width)}>Experience</h1>
 			<Masonry 
 				breakpointCols={experienceBreakpoints} 
 				className="my-masonry-grid"
