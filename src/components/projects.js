@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {ThemeContextProvider} from "./theme-provider";
+// import {ThemeContextProvider} from "./theme-provider";
 import { MasonryPost, PostMasonry, PostGrid } from "../components/ui-components";
 import projects from "../assets/posts/projects-post";
 
@@ -21,7 +21,7 @@ const recentProjects = [...projects];
 mergeStyles(projects, projectsConfig);
 
 export default function Projects () {
-	const state = useContext(ThemeContextProvider);
+	// const state = useContext(ThemeContextProvider);
 
 	return (
 		<div> 

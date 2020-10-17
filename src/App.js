@@ -8,6 +8,7 @@ import "./assets/scss/base.scss"
 import { ThemeContextProvider } from './components/theme-provider';
 import {ProjectsComp} from "./components/ui-components";
 import {Projects} from "../src/components";
+import Experience from './components/experience';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           </Switch>
           <Hero />
           <Projects />
+          <Experience />
       
         {/* </div> */}
       </ThemeContextProvider> 
