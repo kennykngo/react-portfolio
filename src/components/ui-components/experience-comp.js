@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {ThemeContext} from "../theme-provider";
+// import "../../assets/scss/_experience-comp.scss"
 
 export default function ExperienceComp (props) { 
 
@@ -7,12 +8,26 @@ export default function ExperienceComp (props) {
 
 	const headingStyle = {
 		color: state.theme.text,
-		backgroundColor: state.theme.primary,
+		backgroundColor: "transparent",
+		fontWeight: 800,
+	}
+
+	const pStyle = {
+		color: state.theme.text,
+	}
+
+	const dateStyle = {
+		color: "rgb(255,45,85)"
 	}
 
 	return(
 	<div className="experience-box">
 		<h2 style={headingStyle}>{props.title}</h2>
+		<h4 style={headingStyle}>{props.company}</h4>
+		<p style={pStyle}>{props.location}</p>
+		<p style={pStyle}>{props.tag}</p>
+		<p style={pStyle}>{props.description}</p>
+		<p style={dateStyle}>{props.date}</p>
 	</div>	
 	)
 }
