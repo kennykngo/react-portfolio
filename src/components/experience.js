@@ -3,11 +3,14 @@ import Masonry from 'react-masonry-css';
 import experience from "../assets/experience/experience-post";
 import {ExperienceComp} from "./ui-components";
 import {ThemeContext } from "./theme-provider";
+import {useMediaQuery } from "./ui-components/useMediaQuery"
 
 
 export default function Experience () {
 	
 	const state = useContext(ThemeContext);
+
+	const is900Width = useMediaQuery('(min-width: 992px)');
 
 	const expStyle = {
 		background: state.theme.primary,
