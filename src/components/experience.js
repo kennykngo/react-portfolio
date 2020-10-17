@@ -52,7 +52,7 @@ export default function Experiences () {
 		686: 1
 	}
 
-	const experiencePosts = [{filterResult: null, pickedFilter: "all", filterMenuActive: false, pickedFilterDropdown: "NEWEST"}, ...experience]
+	const experiencePosts = [...experience]
 
 	console.log(experiencePosts);
 

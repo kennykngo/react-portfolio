@@ -6,7 +6,7 @@ import { Hero, Navigation } from "./components/index.jsx"
 
 import "./assets/scss/base.scss"
 import { ThemeContextProvider } from './components/theme-provider';
-import {ProjectsComp} from "./components/ui-components";
+// import {ProjectsComp} from "./components/ui-components";
 import {Projects} from "../src/components";
 import Experience from './components/experience';
 
