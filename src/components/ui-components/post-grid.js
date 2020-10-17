@@ -40,7 +40,7 @@ export default function PostGrid({ posts }) {
 	const h1Style = {
 		container: is900Width => ({
 			color: state.theme.text,
-			marginLeft: is900Width && "-4rem"
+			// marginLeft: is900Width && "-4rem"
 		})
 	}
 
@@ -68,15 +68,15 @@ export default function PostGrid({ posts }) {
 				<Col lg={4}>
 					<h1 className="font-weight-800 font-60" style={h1Style.container(is900Width)}>Projects</h1>
 				</Col>
-				<Col md={12} lg={5}>
+				{/* <Col md={12} lg={5}>
 					<p></p>
-				</Col>
+				</Col> */}
 			</Row>
 		</div>
 		<section className="post-grid container">
 
 		  {paginatedPosts.map((post, index) => (
-			<div className="post-container" style={cardStyle}>
+			<div className="post-container" key={index} style={cardStyle}>
 			  <figure>
 				<a href={post.deployLink}>
 				  <img
@@ -88,7 +88,7 @@ export default function PostGrid({ posts }) {
 				<TagRow tags={post.categories} />
 				<div className="d-flex justify-content-between align-flex-end">
 			  		<h2 style={headingStyle}>{post.title}</h2>
-					<A href={post.githubLink}><i class="fab fa-github-square fa-2x"/></A>
+					<A href={post.githubLink}><i className="fab fa-github-square fa-2x"/></A>
 				</div>
 			  <h4 style={headingStyle}>{post.description}</h4>
 			  <p style={textStyle} className="description-text">{post.point}</p>
