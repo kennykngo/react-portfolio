@@ -37,20 +37,20 @@ export default [
 	}, 
 	{
 		id: "5",
-		title: "Web and Graphic Designer",
-		company: "San Francisco State University",
-		tag: "design",
-		description: "Generated graphics to increase survey participation by over 200%. Produced flyers, websites using Drupal, and a logo to be viewed by over 35,000 faculties and students campus-wide.",
-		date: "Aug 2019 - Jun 2020",
+		title: "Explainer",
+		company: "Exploratorium",
+		tag: "people interaction",
+		description: "Elicidated exhibits and guided 100+ people everyday around the museum",
+		date: "Oct 2013 - Feb 2014",
 		location: "San Francisco, CA"
 	}, 
 	{
 		id: "6",
-		title: "Web and Graphic Designer",
-		company: "San Francisco State University",
-		tag: "design",
-		description: "Generated graphics to increase survey participation by over 200%. Produced flyers, websites using Drupal, and a logo to be viewed by over 35,000 faculties and students campus-wide.",
-		date: "Aug 2019 - Jun 2020",
+		title: "Public Relations Intern",
+		company: "Bay Area Air Quality Management District",
+		tag: "people interaction",
+		description: "Explained the importance of air quality to 120+ individuals, from CEOs to girl scouts.",
+		date: "Jun 2012 - Aug 2012",
 		location: "San Francisco, CA"
 	}, 
 ]

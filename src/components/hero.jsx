@@ -9,24 +9,28 @@ const logoLinks = [
     {
         alt: "github",
         src: "fa-github-square",
+        // src: "fa-github",
         path: "https://github.com/kennykngo",
         class: "",
     },
     {
         alt: "behance",
         src: "fa-behance-square",
+        // src: "fa-behance",
         path: "https://behance.net/kennyngo",
         class: "",
     },
     {
         alt: "linkedin",
         src: "fa-linkedin",
+        // src: "fa-linkedin-in",
         path: "https://linkedin.com/in/kenny-ngo",
         class: "",
     },
     {
         alt: "medium",
         src: "fa-medium",
+        // src: "fa-medium-m",
         path: "https://medium.com/@kenny.ngo.design",
         class: "br-5",
     },
@@ -73,7 +77,7 @@ const Hero = () => {
                                         <li key={index} >
                                             {/* Do not use Link since it will load to the same page */}
                                             <A href={link.path}> 
-                                                <i className={`fab ${link.src} ${link.class} fa-3x`} style={heroStyle, {backgroundColor: "transparent"}}>
+                                                <i className={`fab ${link.src} circle-icon fa-3x`} style={heroStyle, {backgroundColor: "transparent"}}>
                                                 </i>
                                             </A>
                                         </li>

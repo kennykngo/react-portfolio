@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { Col, Row } from "react-flexbox-grid";
 import Masonry from 'react-masonry-css';
 
-import experiences from "../assets/experience/experience-post";
+import experiences from "../assets/posts/experience-post";
 import Arrow from "../assets/images/arrow.svg";
 import { ThemeContext } from "./theme-provider";
 import { ExperienceComp } from "./ui-components";
@@ -17,6 +17,7 @@ export default function Experience () {
 	const [pickedFilter, setPickedFilter] = useState("all"); 
 	const [filterMenuActive, setFilterMenuActive] = useState(false); 
 	const [pickedFilterDropdown, setPickedFilterDropdown] = useState("NEWEST");
+	const [click, setClick] = useState(false);
 
 	useEffect(() => filterGallery("all"), []);
 
@@ -119,7 +120,7 @@ export default function Experience () {
 			text: "People Interaction"
 		},
 	]
-	
+
 		let filterDropDown = null;
 		if (filterMenuActive) {
 			filterDropDown = (
@@ -169,8 +170,9 @@ export default function Experience () {
 						<Col xs={12} sm={12} md={4} lg={3}>
 						<div
 							className="portfolio__filter"
-							onMouseEnter={() => filterMenuHover(true)}
-							onMouseLeave={() => filterMenuHover(false)}
+							// onMouseEnter={() => filterMenuHover(true)}
+							// onMouseLeave={() => filterMenuHover(false)}
+							onClick={() => filterMenuHover(false) && !filterMenuHover(true)}
 						>
 							<p className="font12">
 							{pickedFilterDropdown.pickedFilterDropdown} FIRST
