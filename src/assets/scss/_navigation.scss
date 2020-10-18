@@ -71,7 +71,8 @@
     position: absolute;
     height: 2.5px;
     width: 100%;
-    // background: $text-light;
+    background: $text-light;
+    // color: #444;
     border-radius: 2px;
     opacity: 1;
     left: 0;
@@ -84,9 +85,9 @@
     -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
 
-    &:hover {
-      // background: $text-link;
-    }
+    // &:hover {
+    //   // background: $text-link;
+    // }
   }
 
   #nav-icon1 span:nth-child(1) {
