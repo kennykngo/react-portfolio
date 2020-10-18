@@ -19,20 +19,20 @@ export default [
 	}, 
 	{
 		id: "3",
-		title: "Web and Graphic Designer",
-		company: "San Francisco State University",
-		tag: "design",
+		title: "3602 Library Page",
+		company: "San Francisco Public Library",
+		tag: "people interaction",
 		description: "Generated graphics to increase survey participation by over 200%. Produced flyers, websites using Drupal, and a logo to be viewed by over 35,000 faculties and students campus-wide.",
-		date: "Aug 2019 - Jun 2020",
+		date: "Apr 2018 - Dec 2018",
 		location: "San Francisco, CA"
 	}, 
 	{
 		id: "4",
-		title: "Web and Graphic Designer",
-		company: "San Francisco State University",
-		tag: "design",
+		title: "Barista",
+		company: "Starbucks",
+		tag: "people interaction",
 		description: "Generated graphics to increase survey participation by over 200%. Produced flyers, websites using Drupal, and a logo to be viewed by over 35,000 faculties and students campus-wide.",
-		date: "Aug 2019 - Jun 2020",
+		date: "Aug 2015 - Sep 2028",
 		location: "San Francisco, CA"
 	}, 
 	{

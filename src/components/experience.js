@@ -141,33 +141,33 @@ class Experience extends React.Component {
 							</li>
 							<li
 								className={
-								this.state.pickedFilter === "ABM"
+								this.state.pickedFilter === "design"
 									? "portfolio__nav-active font12"
 									: "font12"
 								}
-								onClick={() => this.filterGallery("ABM")}
+								onClick={() => this.filterGallery("design")}
 							>
-								ABM
+								Design
 							</li>
 							<li
 								className={
-								this.state.pickedFilter === "Sales"
+								this.state.pickedFilter === "people interaction"
 									? "portfolio__nav-active font12"
 									: "font12"
 								}
-								onClick={() => this.filterGallery("Sales")}
+								onClick={() => this.filterGallery("people interaction")}
 							>
-								SALES
+								People Interaction
 							</li>
 							<li
 								className={
-								this.state.pickedFilter === "Entrepreneurship"
+								this.state.pickedFilter === "coding"
 									? "portfolio__nav-active font12"
 									: "font12"
 								}
-								onClick={() => this.filterGallery("Entrepreneurship")}
+								onClick={() => this.filterGallery("coding")}
 							>
-								ENTREPRENEURSHIP
+								Coding
 							</li>
 							</ul>
 						</div>
@@ -187,7 +187,7 @@ class Experience extends React.Component {
 						</Col>
 				</Row>
 			</div>
-			
+
 			<Masonry 
 				breakpointCols={experienceBreakpoints} 
 				className="my-masonry-grid"
