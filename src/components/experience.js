@@ -68,6 +68,10 @@ class Experience extends React.Component {
 		this.setState({ filterResult: result });
 	}
 
+	useContextTheme (style) {
+		useContext(style);
+	}
+
 	render() { 
 		// Rendering experience
 		let experienceRender = null;
@@ -102,6 +106,26 @@ class Experience extends React.Component {
 		padding: "0 15px"
 	}
 
+	const tags = [
+		{
+			expTag: "all",
+			text: "ALL"
+		},
+		{
+			expTag: "design",
+			text: "DESIGN"
+		},
+		{
+			expTag: "coding",
+			text: "Coding"
+		},
+		{
+			expTag: "people interaction",
+			text: "People Interaction"
+		},
+
+	]
+
 		let filterDropDown = null;
 		if (this.state.filterMenuActive) {
 			filterDropDown = (
@@ -129,46 +153,16 @@ class Experience extends React.Component {
 						<Col xs={12} sm={12} md={8} lg={9}>
 						<div className="portfolio__nav">
 							<ul>
-							<li
-								className={
-								this.state.pickedFilter === "all"
-									? "portfolio__nav-active font12"
-									: "font12"
-								}
-								onClick={() => this.filterGallery("all")}
-							>
-								ALL
-							</li>
-							<li
-								className={
-								this.state.pickedFilter === "design"
-									? "portfolio__nav-active font12"
-									: "font12"
-								}
-								onClick={() => this.filterGallery("design")}
-							>
-								Design
-							</li>
-							<li
-								className={
-								this.state.pickedFilter === "people interaction"
-									? "portfolio__nav-active font12"
-									: "font12"
-								}
-								onClick={() => this.filterGallery("people interaction")}
-							>
-								People Interaction
-							</li>
-							<li
-								className={
-								this.state.pickedFilter === "coding"
-									? "portfolio__nav-active font12"
-									: "font12"
-								}
-								onClick={() => this.filterGallery("coding")}
-							>
-								Coding
-							</li>
+								{tags.map((post, index) => {
+									return(
+									<li 
+									className={`${this.state.pickedFilter} === ${post.expTag}
+										? return "portfolio__nav-active font12"
+										: return "font12"
+									`} 
+									onClick={() => this.filterGallery(`${post.expTag}`)}
+									>{post.text}</li>
+								)})}
 							</ul>
 						</div>
 						</Col>
@@ -181,7 +175,7 @@ class Experience extends React.Component {
 							<p className="font12">
 							{this.state.pickedFilterDropdown} FIRST
 							</p>
-							<img src={Arrow} alt="arrow" />
+							<i class="fas fa-angle-down"></i>
 							{filterDropDown}
 						</div>
 						</Col>
