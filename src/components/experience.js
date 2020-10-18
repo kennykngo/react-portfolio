@@ -11,12 +11,12 @@ import { useMediaQuery } from "./ui-components/useMediaQuery"
 
 export default function Experience () {
 	// const [experience, setExperience] = useState({ experiencePosts: experiences });
-	const [filterResult, setFilterResult] = useState(null); 
+	const [filterResult, setFilterResult] = useState([]); 
 	const [pickedFilter, setPickedFilter] = useState("all"); 
 	const [filterMenuActive, setFilterMenuActive] = useState(false); 
 	const [pickedFilterDropdown, setPickedFilterDropdown] = useState("NEWEST");
 
-	useEffect(() => filterGallery("all"));
+	useEffect(() => filterGallery("all"), []);
 
 	// Filtering Experience by Tag
 	const filterGallery = (target) => {
@@ -45,8 +45,11 @@ export default function Experience () {
 		setPickedFilterDropdown({ pickedFilterDropdown: filter});
 		setFilterMenuActive({ filterMenuActive: false });
 
-		let experienceArr = [...filterResult];
+		console.log(filterResult);
+		let experienceArr = [...filterResult.filterResult];
 		let result;
+		
+		console.log(experienceArr);
 
 		if (filter === "NEWEST") {
 			result = experienceArr.sort((a, b) => (a.id > b.id ? 1 : -1));
@@ -57,10 +60,12 @@ export default function Experience () {
 		setFilterResult({ filterResult: result });
 	}
 
+	console.log(filterResult);
+
 		// Rendering experience
 		let experienceRender = null;
-		if (experiences) {
-			experienceRender = experiences.map((experience, index) => (
+		if (filterResult.filterResult) {
+			{experienceRender = filterResult.filterResult.map((experience, index) => (
 				<ExperienceComp 
 					title={experience.title} 
 					company={experience.company} 
@@ -69,7 +74,7 @@ export default function Experience () {
 					location={experience.location}
 					key={index}
 				/>
-			));
+			))};
 		}
 
 		// Experience Breakpoints
@@ -112,22 +117,22 @@ export default function Experience () {
 		if (filterMenuActive) {
 			filterDropDown = (
 				<div className="portfolio__filter-menu shadow">
-				<p
-				  className="font12"
-				  onClick={() => this.filterDropDownHandler("NEWEST")}
-				>
-				  NEWEST
-				</p>
-				<p
-				  className="font12"
-				  onClick={() => this.filterDropDownHandler("OLDEST")}
-				>
-				  OLDEST
-				</p>
-			  </div>
+					<p
+						className="font12"
+						onClick={() => filterDropDownHandler("NEWEST")}
+					>
+						NEWEST
+					</p>
+					<p
+						className="font12"
+						onClick={() => filterDropDownHandler("OLDEST")}
+					>
+						OLDEST
+					</p>
+				</div>
 			);
 		}
-
+		
 		return (
 			<div style={expStyle}>
 				<div className="expWrapper">
@@ -143,7 +148,7 @@ export default function Experience () {
 										? return "portfolio__nav-active font12"
 										: return "font12"
 									`} 
-									onClick={() => this.filterGallery(`${post.expTag}`)}
+									onClick={() => filterGallery(`${post.expTag}`)}
 									>{post.text}</li>
 								)})}
 							</ul>
@@ -156,9 +161,9 @@ export default function Experience () {
 							onMouseLeave={() => filterMenuHover(false)}
 						>
 							<p className="font12">
-							{pickedFilterDropdown} FIRST
+							{pickedFilterDropdown.pickedFilterDropdown} FIRST
 							</p>
-							<i class="fas fa-angle-down"></i>
+							<i className="fas fa-angle-down"></i>
 							{filterDropDown}
 						</div>
 						</Col>
