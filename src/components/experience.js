@@ -79,7 +79,6 @@ export default function Experience () {
 			))};
 		}
 
-
 		// Experience Breakpoints
 		const experienceBreakpoints = {
 			default: 3,
@@ -88,13 +87,19 @@ export default function Experience () {
 		};
 
 		const expStyle = {
-		// maxWidth: "1200px",
 		background: state.theme.primary,
 		width: "100%",
 		height: "100%",
 		margin: "0 auto",
 		padding: "0 15px"
 	}
+
+		const h1Style = {
+			fontWeight: 800,
+			color: state.theme.text,
+			fontSize: "60px",
+			// marginLeft: is900Width && "-4rem",
+	}	
 
 	const tags = [
 		{
@@ -113,9 +118,8 @@ export default function Experience () {
 			expTag: "people interaction",
 			text: "People Interaction"
 		},
-
 	]
-
+	
 		let filterDropDown = null;
 		if (filterMenuActive) {
 			filterDropDown = (
@@ -139,6 +143,11 @@ export default function Experience () {
 		return (
 			<div style={expStyle}>
 				<div className="expWrapper">
+				<Row start="xs" center="lg" style={{display: "flex"}}>
+					<Col lg={4}>
+					<h2 style={h1Style}>Experience</h2>
+				</Col>
+				</Row>
 					<Row>
 						<Col xs={12} sm={12} md={8} lg={9}>
 						<div className="portfolio__nav">
@@ -190,15 +199,6 @@ export default function Experience () {
 
 // 	const is900Width = useMediaQuery('(min-width: 992px)');
 
-// 	const expStyle = {
-// 		// maxWidth: "1200px",
-// 		background: state.theme.primary,
-// 		width: "100%",
-// 		height: "100%",
-// 		margin: "0 auto",
-// 		padding: "0 15px"
-// 	}
-
 // 	const h1Style = {
 // 		container: is900Width => ({
 // 			fontWeight: 800,
@@ -207,17 +207,6 @@ export default function Experience () {
 // 			// marginLeft: is900Width && "-4rem",
 // 		})
 // 	}	
-	
-// 	const experienceBreakpoints = {
-// 		default: 3,
-// 		992: 2,
-// 		686: 1
-// 	}
-
-// 	const experiencePosts = [...experience]
-
-// 	console.log(experiencePosts);
-
 
 // 	return (
 // 		<div style={expStyle}>
