@@ -1,13 +1,14 @@
 @import "./variables";
+@import "./experience-comp";
+@import "./experience.scss";
 @import "./hero";
+@import "./home.scss";
 @import "./navigation";
+@import "./post-grid";
+@import "./post-masonry";
+@import "./projects-comp";
 @import "./styles";
 @import "./tag-row";
-@import "./post-masonry";
-@import "./home.scss";
-@import "./post-grid";
-@import "./projects-comp";
-@import "./experience-comp";
 
 // reordering the scss with var on top and nav on bottom fixes issue
 // adds specificity to override the HTML
