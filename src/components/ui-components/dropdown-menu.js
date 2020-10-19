@@ -7,7 +7,7 @@ const DropdownMenu = (props) => {
 
 	useEffect(() => {
 		const pageClickEvent = e => {
-			console.log(e);
+			(dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) && setIsActive(!isActive);
 		};
 
 		// if menu is active, listen for clicks
@@ -21,7 +21,7 @@ const DropdownMenu = (props) => {
 	return (
 		<div className="menu-container">
 			<button onClick={onClick} className="menu-trigger">
-				<span className="sorting-reference"></span>
+				<span className="sorting-reference">OLDEST/NEWEST</span>
 			</button>
 			<div ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
 				<ul>
