@@ -10,9 +10,12 @@ const DropdownMenu = (props) => {
 			console.log(e);
 		};
 
+		// if menu is active, listen for clicks
 		if (isActive) {
 			window.addEventListener("click", pageClickEvent);
 		}
+
+		return () => window.removeEventListener("click", pageClickEvent);
 	}, [isActive])
 
 	return (
