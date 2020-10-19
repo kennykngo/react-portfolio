@@ -2,6 +2,7 @@
   position: relative;
 }
 
+// default hidden visibility (maybe do display: none;?)
 .menu {
   background: #fff;
   border-radius: 8px;
@@ -12,4 +13,22 @@
   visibility: hidden;
   transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    border-bottom: 1px solid #ddd;
+  }
 }
+
+// if menu isActive, then make the menu appear
