@@ -5,8 +5,8 @@ import Masonry from 'react-masonry-css';
 import experiences from "../assets/posts/experience-post";
 import Arrow from "../assets/images/arrow.svg";
 import { ThemeContext } from "./theme-provider";
-import { ExperienceComp } from "./ui-components";
-import { useMediaQuery } from "./ui-components/useMediaQuery"
+import { ExperienceComp, DropdownMenu } from "./ui-components";
+// import { useMediaQuery } from "./ui-components/useMediaQuery"
 
 
 export default function Experience () {
@@ -174,6 +174,7 @@ export default function Experience () {
 							// onMouseLeave={() => filterMenuHover(false)}
 							onClick={() => filterMenuHover(false) && !filterMenuHover(true)}
 						>
+						<DropdownMenu />
 							<p className="font12">
 							{pickedFilterDropdown.pickedFilterDropdown} FIRST
 							</p>
