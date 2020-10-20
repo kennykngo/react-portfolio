@@ -49,7 +49,7 @@ export default function EducationSkills () {
 
 	return (
 		<div id="education-skills" style={educationStyle}>
-			<div className="wrapper">
+			<div className="wrapper title">
 				<Title>Education and Skills</Title>
 				<div className="education-grid container">
 					{educationPosts.map((posts) => {
