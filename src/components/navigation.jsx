@@ -17,7 +17,7 @@ const navLinks = [
     },
     {
         title: "Education & Skills",
-        path: "education&skills",
+        path: "education-skills",
     },
     {
         title: "Experience",
@@ -58,6 +58,7 @@ export default function Navigation ({user}) {
                             <Links 
                                 activeClass="active-link"
                                 spy={true}
+                                smooth={true}
                                 duration={500}
                                 offset={-70}
                                 to={link.path}
