@@ -127,7 +127,7 @@ export default function Experience () {
 	console.log(pickedFilter.pickedFilter);
 		
 		return (
-			<div style={expStyle}>
+			<div style={expStyle} id="experience">
 				<div className="expWrapper">
 				<Title>Experience</Title>
 					<Row>

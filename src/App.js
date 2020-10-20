@@ -2,15 +2,21 @@ import React from 'react';
 import { Redirect, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import PageRenderer from "./page-renderer"
-import { Hero, Navigation } from "./components/index.jsx"
+import { EducationSkills, Hero, Navigation } from "./components/index.jsx"
 
 import "./assets/scss/base.scss"
 import { ThemeContextProvider } from './components/theme-provider';
 // import {ProjectsComp} from "./components/ui-components";
-import {Projects} from "../src/components";
-import Experience from './components/experience';
+import {Experience, Projects} from "../src/components";
+
 
 function App() {
+
+  const state = {
+    userIsScolled: false,
+  }
+
+
 
   const user = { 
     firstName: "Kenny",
@@ -30,6 +36,7 @@ function App() {
           </Switch>
           <Hero />
           <Projects />
+          <EducationSkills />
           <Experience />
       
         {/* </div> */}

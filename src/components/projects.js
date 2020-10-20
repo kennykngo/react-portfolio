@@ -24,7 +24,7 @@ export default function Projects () {
 	// const state = useContext(ThemeContextProvider);
 
 	return (
-		<div> 
+		<div id="projects"> 
 			<PostGrid posts={projects} columns={2} />
 			{/* <MasonryPost post={projects} /> */}
 		</div>

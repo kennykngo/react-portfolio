@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 import { ThemeContext } from "./theme-provider";
@@ -8,15 +9,19 @@ import ToggleTheme from "./toggle-theme";
 const navLinks = [
     {
         title: "Home",
-        path: "/",
+        path: "hero",
     },
     {
         title: "Projects",
-        path: "/projects",
+        path: "projects",
+    },
+    {
+        title: "Education & Skills",
+        path: "education&skills",
     },
     {
         title: "Experience",
-        path: "/experience",
+        path: "experience",
     },
 ];
 
@@ -51,7 +56,10 @@ export default function Navigation ({user}) {
                     {navLinks.map((link, index) => (
                         <li key={index}  > 
                             <Links 
-                                // style={{color: state.theme.text}} 
+                                activeClass="active-link"
+                                spy={true}
+                                duration={500}
+                                offset={-70}
                                 to={link.path}
                                 >
                                     {link.title}
