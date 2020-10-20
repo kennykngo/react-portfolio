@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-// import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -28,9 +27,7 @@ const navLinks = [
 export default function Navigation ({user}) {
     
     const [menuActive, setMenuActive] = useState(false);
-
     const state = useContext(ThemeContext);
-
     const Links = styled(Link)`
         color: ${state.theme.text};
 
@@ -69,10 +66,6 @@ export default function Navigation ({user}) {
                     ))}
                 </ul>
             </div>
-            {/* <i 
-                className={`ionicons icon ${menuActive ? "ion-ios-close": "ion-ios-menu"}`} 
-                onClick={() => setMenuActive(!menuActive)} 
-            /> */}
             <div id="nav-icon1" className={`${menuActive && "open" }`} onClick={() => setMenuActive(!menuActive)}>
                 <span></span>
                 <span></span>
