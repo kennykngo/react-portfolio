@@ -120,26 +120,6 @@ export default function Experience () {
 			text: "People Interaction"
 		},
 	]
-
-		let filterDropDown = null;
-		if (filterMenuActive) {
-			filterDropDown = (
-				<div className="portfolio__filter-menu shadow">
-					<p
-						className="font12"
-						onClick={() => filterDropDownHandler("NEWEST")}
-					>
-						NEWEST
-					</p>
-					<p
-						className="font12"
-						onClick={() => filterDropDownHandler("OLDEST")}
-					>
-						OLDEST
-					</p>
-				</div>
-			);
-		}
 		
 		return (
 			<div style={expStyle}>
@@ -150,7 +130,7 @@ export default function Experience () {
 				</Col>
 				</Row>
 					<Row>
-						<Col xs={12} sm={12} md={8} lg={9}>
+						<Col md={8} lg={9}>
 						<div className="portfolio__nav">
 							<ul>
 								{tags.map((post, index) => {
@@ -167,20 +147,11 @@ export default function Experience () {
 							</ul>
 						</div>
 						</Col>
-						<Col xs={12} sm={12} md={4} lg={3}>
-						<DropdownMenu current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
-						<div
-							className="portfolio__filter"
-							// onMouseEnter={() => filterMenuHover(true)}
-							// onMouseLeave={() => filterMenuHover(false)}
-							onClick={() => filterMenuHover(false) && !filterMenuHover(true)}
-						>
+						<Col xs={12} md={4} lg={3}>
+							<DropdownMenu current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
 							<p className="font12">
-							{pickedFilterDropdown.pickedFilterDropdown} FIRST
 							</p>
-							{/* <i className="fas fa-angle-down"></i>
-							{filterDropDown} */}
-						</div>
+							{/* <br/> */}
 						</Col>
 				</Row>
 			</div>
