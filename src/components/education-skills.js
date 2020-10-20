@@ -18,6 +18,10 @@ export default function EducationSkills () {
 		fontWeight: state.theme.pFontWeight,
 	}
 
+	const cardStyle = {
+		backgroundColor: state.theme.card
+	}
+
 	const educationPosts = [
 		{ 
 			text: "Visual Communication Design",
@@ -31,7 +35,6 @@ export default function EducationSkills () {
 		},
 		{ 
 			text: "Language & Application Skills",
-			skills: "",
 			location: "",
 			description: `HTML5, CSS3, JavaScript, ES6, NodeJS, MySQL, MongoDB, jQuery, Express, & ReactJS
 
@@ -41,17 +44,19 @@ export default function EducationSkills () {
 
 	return (
 		<div id="education-skills" style={educationStyle}>
-			<Title>Education and Skills</Title>
-			<div className="education-grid container">
-				{educationPosts.map((posts) => {
-					return (
-					<div className={`post-container ${posts.skills && "skills"}`} >
-						<h2 style={textStyle}>{posts.text}</h2>
-						<h4 style={textStyle}>{posts.location}</h4>
-						<p style={pStyle}>{posts.description}</p>
-					</div>
-					)
-				})}
+			<div className="wrapper">
+				<Title>Education and Skills</Title>
+				<div className="education-grid container">
+					{educationPosts.map((posts) => {
+						return (
+						<div className={`post-container ${posts.location === "" && cardStyle}`} >
+							<h2 style={textStyle}>{posts.text}</h2>
+							<h4 style={textStyle}>{posts.location}</h4>
+							<p style={pStyle}>{posts.description}</p>
+						</div>
+						)
+					})}
+				</div>
 			</div>
 		</div>
 	)
