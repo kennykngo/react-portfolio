@@ -9,7 +9,7 @@
 // default hidden visibility (maybe do display: none;?)
 .menu {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 2px;
   // position: absolute;
   // width: 200px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
@@ -23,6 +23,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    border-radius: 5px;
   }
 
   ul {
@@ -30,18 +31,22 @@
     padding: 0;
     margin: 0;
     background-color: #fff;
+    border-radius: 9px;
   }
 
   li {
-    border-bottom: 1px solid #ddd;
     cursor: pointer;
     padding: 0 7px;
+
+    &:nth-child(1) {
+      border-bottom: 1px solid #ddd;
+    }
   }
 }
 
 .menu-trigger {
   background: #fff;
-  border-radius: 9px;
+  border-radius: 3px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
