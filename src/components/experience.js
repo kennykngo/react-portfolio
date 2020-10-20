@@ -168,18 +168,18 @@ export default function Experience () {
 						</div>
 						</Col>
 						<Col xs={12} sm={12} md={4} lg={3}>
+						<DropdownMenu current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
 						<div
 							className="portfolio__filter"
 							// onMouseEnter={() => filterMenuHover(true)}
 							// onMouseLeave={() => filterMenuHover(false)}
 							onClick={() => filterMenuHover(false) && !filterMenuHover(true)}
 						>
-						<DropdownMenu />
 							<p className="font12">
 							{pickedFilterDropdown.pickedFilterDropdown} FIRST
 							</p>
-							<i className="fas fa-angle-down"></i>
-							{filterDropDown}
+							{/* <i className="fas fa-angle-down"></i>
+							{filterDropDown} */}
 						</div>
 						</Col>
 				</Row>

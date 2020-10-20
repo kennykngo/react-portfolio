@@ -21,15 +21,16 @@ const DropdownMenu = (props) => {
 	return (
 		<div className="menu-container">
 			<button onClick={onClick} className="menu-trigger">
-				<span className="sorting-reference">OLDEST/NEWEST</span>
+				<i className={`fas ${isActive ? "fa-angle-up" : "fa-angle-down"}`}></i>
+				<span className="sorting-reference"> {props.current} </span>
 			</button>
 			<div ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
 				<ul>
-					<li>
-						OLDEST
-					</li>
-					<li>
+					<li onClick={props.newest}>
 						NEWEST
+					</li>
+					<li onClick={props.oldest}>
+						OLDEST
 					</li>
 				</ul>
 			</div>

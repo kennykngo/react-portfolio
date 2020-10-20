@@ -25,6 +25,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: #fff;
   }
 
   li {
@@ -35,7 +36,7 @@
 
 .menu-trigger {
   background: #fff;
-  border-radius: 90px;
+  border-radius: 9px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
