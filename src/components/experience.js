@@ -5,8 +5,9 @@ import Masonry from 'react-masonry-css';
 import experiences from "../assets/posts/experience-post";
 import Arrow from "../assets/images/arrow.svg";
 import { ThemeContext } from "./theme-provider";
-import { ExperienceComp, DropdownMenu } from "./ui-components";
+import { ExperienceComp, DropdownMenu, Title } from "./ui-components";
 import styled from "styled-components";
+
 // import { useMediaQuery } from "./ui-components/useMediaQuery"
 
 
@@ -96,13 +97,6 @@ export default function Experience () {
 		padding: "0 15px"
 	}
 
-		const h1Style = {
-			fontWeight: 800,
-			color: state.theme.text,
-			fontSize: "60px",
-			// marginLeft: is900Width && "-4rem",
-	}	
-
 	const Li = styled.li`
 		color: ${state.theme.text};
 
@@ -135,11 +129,7 @@ export default function Experience () {
 		return (
 			<div style={expStyle}>
 				<div className="expWrapper">
-				<Row start="xs" center="lg" style={{display: "flex"}}>
-					<Col lg={4}>
-					<h2 style={h1Style}>Experience</h2>
-				</Col>
-				</Row>
+				<Title>Experience</Title>
 					<Row>
 						<Col xs={12} md={8} lg={9}>
 						<div className="portfolio__nav">

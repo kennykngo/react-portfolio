@@ -1,9 +1,8 @@
 import React, { useContext, useMemo, useState } from 'react';
-import { Col, Row } from 'react-flexbox-grid';
 import styled from "styled-components";
 
 import { ThemeContext } from "../theme-provider";
-import { TagRow } from "./";
+import { TagRow, Title } from "./";
 import { useMediaQuery } from "./useMediaQuery";
 
 export default function PostGrid({ posts }) {
@@ -64,14 +63,7 @@ export default function PostGrid({ posts }) {
 	return (
 	  <section className="grid-pagination-container" style={projectStyle}>
 		<div className="wrapper">
-			<Row start="xs" center="lg">
-				<Col lg={4}>
-					<h1 className="font-weight-800 font-60" style={h1Style.container(is900Width)}>Projects</h1>
-				</Col>
-				{/* <Col md={12} lg={5}>
-					<p></p>
-				</Col> */}
-			</Row>
+			<Title>Projects</Title>
 		</div>
 		<section className="post-grid container">
 

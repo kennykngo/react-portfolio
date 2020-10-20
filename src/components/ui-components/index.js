@@ -5,6 +5,7 @@ import PostMasonry from "./post-masonry";
 import PostGrid from "./post-grid";
 import ExperienceComp from "./experience-comp";
 import DropdownMenu from "./dropdown-menu";
+import Title from "./title-comp"
 
 export {
 	ExperienceComp,
@@ -13,6 +14,7 @@ export {
 	TagRow,
 	MasonryPost,
 	DropdownMenu,
+	Title
 
 	// ProjectsComp,
 }
