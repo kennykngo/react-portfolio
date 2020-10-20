@@ -20,9 +20,11 @@ export default function EducationSkills () {
 
 	const cardStyle = {
 		backgroundColor: state.theme.card,
-		padding: "15px",
+		padding: "12px",
 		borderRadius: "9px",
 	}
+
+
 
 	const educationPosts = [
 		{ 
@@ -52,7 +54,7 @@ export default function EducationSkills () {
 				<div className="education-grid container">
 					{educationPosts.map((posts) => {
 						return (
-						<div className={`post-container`} style={posts.location === "" ? cardStyle : {}}>
+						<div className={`post-container`} style={posts.location === "" ? cardStyle : {padding: "12px"}}>
 							<h2 style={textStyle}>{posts.text}</h2>
 							<h4 style={textStyle}>{posts.location}</h4>
 							{posts.location === "" && <h4 style={textStyle}>{posts.languages}</h4>}

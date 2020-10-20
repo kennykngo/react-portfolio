@@ -28,7 +28,6 @@ function App() {
       <ThemeContextProvider> 
         {/* <div className="App"> */}
           <Navigation />
-          {/* <ProjectsComp deployLink="https://google.com" title="COVID Dashboard"  /> */}
           <Switch>
             <Route path="/page" component={PageRenderer} />
             <Route path="/" render={()=> <Redirect to="/home" />} />
