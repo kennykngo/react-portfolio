@@ -36,9 +36,10 @@ export default function EducationSkills () {
 		{ 
 			text: "Language & Application Skills",
 			location: "",
-			description: `HTML5, CSS3, JavaScript, ES6, NodeJS, MySQL, MongoDB, jQuery, Express, & ReactJS
-
-			Adobe XD, Sketch, Photoshop, Illustrator, InDesign, PremierePro, Figma`
+			languages: "Languages",
+			applications: "Applications",
+			description: `HTML5, CSS3, JavaScript, ES6, NodeJS, MySQL, MongoDB, jQuery, Express, & ReactJS`,
+			appDescription: "Adobe XD, Sketch, Photoshop, Illustrator, InDesign, PremierePro, Figma",
 		},
 	]
 
@@ -52,7 +53,10 @@ export default function EducationSkills () {
 						<div className={`post-container ${posts.location === "" && cardStyle}`} >
 							<h2 style={textStyle}>{posts.text}</h2>
 							<h4 style={textStyle}>{posts.location}</h4>
+							{posts.location === "" && <h4 style={textStyle}>{posts.languages}</h4>}
 							<p style={pStyle}>{posts.description}</p>
+							{posts.location === "" && <h4 style={textStyle}>{posts.applications}</h4>}
+							{posts.location === "" && <p style={pStyle}>{posts.appDescription}</p>}
 						</div>
 						)
 					})}
