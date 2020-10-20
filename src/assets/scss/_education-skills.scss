@@ -1,2 +1,16 @@
 #education-skills {
+  width: 100%;
+  margin: 0 auto;
+
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 30px;
+    grid-auto-rows: 1fr;
+    padding-bottom: 50px;
+
+    .post-container {
+      display: flex;
+    }
+  }
 }
