@@ -52,9 +52,9 @@ export default function EducationSkills () {
 			<div className="wrapper title">
 				<Title>Education and Skills</Title>
 				<div className="education-grid container">
-					{educationPosts.map((posts) => {
+					{educationPosts.map((posts, index) => {
 						return (
-						<div className={`post-container`} style={posts.location === "" ? cardStyle : {padding: "12px"}}>
+						<div key={index} className={`post-container`} style={posts.location === "" ? cardStyle : {padding: "12px"}}>
 							<h2 style={textStyle}>{posts.text}</h2>
 							<h4 style={textStyle}>{posts.location}</h4>
 							{posts.location === "" && <h4 style={textStyle}>{posts.languages}</h4>}

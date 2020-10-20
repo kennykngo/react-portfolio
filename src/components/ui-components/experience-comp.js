@@ -1,13 +1,9 @@
 import React, {useContext} from 'react';
 import {ThemeContext} from "../theme-provider";
-// import "../../assets/scss/_experience-comp.scss"
-import {useMediaQuery} from "../ui-components/useMediaQuery"
 
 export default function ExperienceComp (props) { 
 
 	const state = useContext(ThemeContext);
-
-	const is900Width = useMediaQuery('(min-width: 992px)');
 
 	const headingStyle = {
 			backgroundColor: "transparent",

@@ -1,6 +1,5 @@
-import React, {useContext} from 'react';
-// import {ThemeContextProvider} from "./theme-provider";
-import { MasonryPost, PostMasonry, PostGrid } from "../components/ui-components";
+import React from 'react';
+import {  PostGrid } from "../components/ui-components";
 import projects from "../assets/posts/projects-post";
 
 
@@ -15,8 +14,6 @@ const mergeStyles = function (posts, config) {
 		post.style = config[index];
 	})
 }
-
-const recentProjects = [...projects];
 
 mergeStyles(projects, projectsConfig);
 

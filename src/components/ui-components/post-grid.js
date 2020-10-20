@@ -3,14 +3,11 @@ import styled from "styled-components";
 
 import { ThemeContext } from "../theme-provider";
 import { TagRow, Title } from "./";
-import { useMediaQuery } from "./useMediaQuery";
 
 export default function PostGrid({ posts }) {
 	// to show 9 records at a time
-	const [pageSize, setPageSize] = useState(9);
-	const [current, setCurrent] = useState(1);
-
-	const is900Width = useMediaQuery('(min-width: 992px)');
+	const [pageSize] = useState(9);
+	const [current] = useState(1);
   
 	// placing posts in section: renders a subset of array of posts by useMemo()
 	// only update when page size changes or page changes
@@ -34,13 +31,6 @@ export default function PostGrid({ posts }) {
 
 	const cardStyle = { 
 		backgroundColor: state.theme.card,
-	}
-
-	const h1Style = {
-		container: is900Width => ({
-			color: state.theme.text,
-			// marginLeft: is900Width && "-4rem"
-		})
 	}
 
 	const headingStyle = {

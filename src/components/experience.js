@@ -3,7 +3,6 @@ import { Col, Row } from "react-flexbox-grid";
 import Masonry from 'react-masonry-css';
 
 import experiences from "../assets/posts/experience-post";
-import Arrow from "../assets/images/arrow.svg";
 import { ThemeContext } from "./theme-provider";
 import { ExperienceComp, DropdownMenu, Title } from "./ui-components";
 import styled from "styled-components";
@@ -19,7 +18,6 @@ export default function Experience () {
 	const [pickedFilter, setPickedFilter] = useState("all"); 
 	const [filterMenuActive, setFilterMenuActive] = useState(false); 
 	const [pickedFilterDropdown, setPickedFilterDropdown] = useState("NEWEST");
-	const [click, setClick] = useState(false);
 
 	useEffect(() => filterGallery("all"), []);
 
@@ -39,11 +37,11 @@ export default function Experience () {
 	};
 
 	// Filter Drop Down Hover Menu
-	const filterMenuHover = (event) => {
-		(event) 
-		? setFilterMenuActive({ filterMenuActive: true }) 
-		: setFilterMenuActive({ filterMenuActive: false });
-	};
+	// const filterMenuHover = (event) => {
+	// 	(event) 
+	// 	? setFilterMenuActive({ filterMenuActive: true }) 
+	// 	: setFilterMenuActive({ filterMenuActive: false });
+	// };
 
 	// Filter drop down handler
 	const filterDropDownHandler = (filter) => {
