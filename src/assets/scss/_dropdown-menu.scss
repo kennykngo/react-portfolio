@@ -1,14 +1,18 @@
 .menu-container {
-  position: relative;
+  // position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  max-width: 200px;
 }
 
 // default hidden visibility (maybe do display: none;?)
 .menu {
   background: #fff;
   border-radius: 8px;
-  position: absolute;
-  width: 200px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  // position: absolute;
+  // width: 200px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
@@ -31,6 +35,7 @@
   li {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
+    padding: 0 7px;
   }
 }
 

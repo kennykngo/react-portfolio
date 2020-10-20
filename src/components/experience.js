@@ -6,6 +6,7 @@ import experiences from "../assets/posts/experience-post";
 import Arrow from "../assets/images/arrow.svg";
 import { ThemeContext } from "./theme-provider";
 import { ExperienceComp, DropdownMenu } from "./ui-components";
+import styled from "styled-components";
 // import { useMediaQuery } from "./ui-components/useMediaQuery"
 
 
@@ -102,6 +103,14 @@ export default function Experience () {
 			// marginLeft: is900Width && "-4rem",
 	}	
 
+	const Li = styled.li`
+		color: ${state.theme.text};
+
+		&:hover { 
+			color: #1890ff;
+		}
+	`;
+
 	const tags = [
 		{
 			expTag: "all",
@@ -113,13 +122,15 @@ export default function Experience () {
 		},
 		{
 			expTag: "coding",
-			text: "Coding"
+			text: "CODING"
 		},
 		{
 			expTag: "people interaction",
-			text: "People Interaction"
+			text: "INTERACTION"
 		},
 	]
+
+	console.log(pickedFilter.pickedFilter);
 		
 		return (
 			<div style={expStyle}>
@@ -130,28 +141,28 @@ export default function Experience () {
 				</Col>
 				</Row>
 					<Row>
-						<Col md={8} lg={9}>
+						<Col xs={12} md={8} lg={9}>
 						<div className="portfolio__nav">
 							<ul>
 								{tags.map((post, index) => {
 									return(
-									<li 
+									<Li
 									key={index}
-									className={`${pickedFilter} === ${post.expTag}
+									className={`${pickedFilter.pickedFilter} === ${post.expTag}
 										? return "portfolio__nav-active font12"
 										: return "font12"
 									`} 
 									onClick={() => filterGallery(`${post.expTag}`)}
-									>{post.text}</li>
+									>{post.text}</Li>
 								)})}
 							</ul>
 						</div>
 						</Col>
-						<Col xs={12} md={4} lg={3}>
+						<Col xs={12} md={4} lg={3} end="xs">
 							<DropdownMenu current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
 							<p className="font12">
 							</p>
-							{/* <br/> */}
+							<br/>
 						</Col>
 				</Row>
 			</div>

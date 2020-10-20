@@ -19,7 +19,7 @@ export const ThemeContextProvider = props => {
       primaryNav: "#ffffff",
       invert: "invert(0.25)",
       pFontWeight: "1",
-      hover: "0px 0px 50px #f8f9fa",
+      hover: "#f8f9fa",
       card: "#ffffff",
 
     },
