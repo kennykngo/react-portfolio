@@ -19,13 +19,13 @@ const DropdownMenu = (props) => {
 	}, [isActive])
 
 	return (
-		<div className="menu-container">
-			<button onClick={onClick} className="menu-trigger">
+		<div style={props.textStyle} className="menu-container">
+			<button style={props.btnStyle} onClick={onClick} className="menu-trigger">
 				<i className={`fas ${isActive ? "fa-angle-up" : "fa-angle-down"}`}></i>
 				<span className="sorting-reference"> {props.current} </span>
 			</button>
-			<div ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
-				<ul>
+			<div ref={dropdownRef} style={props.filterStyle} className={`menu ${isActive ? "active" : "inactive"}`}>
+				<ul style={props.filterStyle}>
 					<li onClick={props.newest}>
 						NEWEST
 					</li>

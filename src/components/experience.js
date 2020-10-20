@@ -159,7 +159,7 @@ export default function Experience () {
 						</div>
 						</Col>
 						<Col xs={12} md={4} lg={3} end="xs">
-							<DropdownMenu current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
+							<DropdownMenu filterStyle={{backgroundColor: `${state.theme.card}`, invert: `${state.theme.invert}`}} textStyle={{color: `${state.theme.text}`}}btnStyle={{backgroundColor: `${state.theme.primaryNav}`}}current={pickedFilterDropdown.pickedFilterDropdown} newest={() => filterDropDownHandler("NEWEST")} oldest={() => filterDropDownHandler("OLDEST")}/>
 							<p className="font12">
 							</p>
 							<br/>

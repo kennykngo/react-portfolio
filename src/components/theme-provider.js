@@ -21,6 +21,7 @@ export const ThemeContextProvider = props => {
       pFontWeight: "1",
       hover: "#f8f9fa",
       card: "#ffffff",
+      hoverBtn: "#1890ff",
 
     },
     dark:{
@@ -32,7 +33,8 @@ export const ThemeContextProvider = props => {
       invert: "invert(0.75)",
       pFontWeight: "51",
       hover: "#f8f9fa",
-      card: "#212121"
+      card: "#212121",
+      hoverBtn: "#1890ff",
     },
   }
 

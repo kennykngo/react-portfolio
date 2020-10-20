@@ -14,7 +14,7 @@ export default function ToggleTheme() {
     position: relative;
     overflow: hidden;
     transition: background 400ms;
-    background-color: ${state.theme.primary} ;
+    background-color: ${state.theme.primary};
     outline: 0;
     border-radius: 0.25rem;
 
@@ -23,7 +23,7 @@ export default function ToggleTheme() {
     }
     
     &:hover { 
-      background-color: #1890ff;
+      background-color: ${state.theme.hoverBtn};
       color: #f8f9fa;
     }
     `;
