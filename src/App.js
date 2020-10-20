@@ -35,8 +35,8 @@ function App() {
             <Route component={() => 404} />
           </Switch>
           <Hero />
-          <Projects />
           <EducationSkills />
+          <Projects />
           <Experience />
       
         {/* </div> */}
