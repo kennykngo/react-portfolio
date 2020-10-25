@@ -28,9 +28,6 @@ export default function ToggleTheme() {
     }
     `;
 
-  // const btn = {
-	// backgroundColor: state.theme.primary,
-  // }
 
   return (
     <Button
