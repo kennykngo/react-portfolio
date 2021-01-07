@@ -30,7 +30,7 @@ export const ThemeContextProvider = (props) => {
       text: "#ccc",
       primaryNav: "#121212",
       invert: "invert(0.75)",
-      pFontWeight: "1",
+      pFontWeight: "249",
       hover: "#f8f9fa",
       card: "#212121",
       hoverBtn: "#1890ff",
