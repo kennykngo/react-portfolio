@@ -3,9 +3,9 @@ html {
 }
 
 .MuiSwitch-colorSecondary.Mui-checked {
-  color: var(--main-button-color);
+  color: var(--main-button-color) !important;
 }
 
 .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
-  background-color: var(--main-button-color);
+  background-color: var(--main-button-color) !important;
 }
