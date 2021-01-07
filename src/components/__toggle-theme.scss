@@ -1,0 +1,11 @@
+html {
+  --main-button-color: #1890ff;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked {
+  color: var(--main-button-color);
+}
+
+.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+  background-color: var(--main-button-color);
+}
