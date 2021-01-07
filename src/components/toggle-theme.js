@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 // import Button from "./button-ripple";
-import { ThemeContext } from './theme-provider';
+import { ThemeContext } from "./theme-provider";
+
+import "./__toggle-theme.scss";
 
 export default function ToggleTheme() {
-
   const state = useContext(ThemeContext);
 
-	const Button = styled.button`
+  const Button = styled.button`
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -18,28 +19,30 @@ export default function ToggleTheme() {
     outline: 0;
     border-radius: 0.25rem;
 
-		&:active { 
-			text-decoration: none;
+    &:active {
+      text-decoration: none;
     }
-    
-    &:hover { 
+
+    &:hover {
       background-color: ${state.theme.hoverBtn};
       color: #f8f9fa;
     }
-    `;
-
+  `;
 
   return (
-    <Button
-      className="mb-5"
-      variant='contained'
-      onClick={() => {
-        state.setTheme(state.theme.type)
-      }}
-      // style={btn}
-    >
-      Toggle Theme
-    </Button>
-  )
-}
+    // <Button
+    //   className="mb-5"
+    //   variant="contained"
+    //   onClick={() => {
+    //     state.setTheme(state.theme.type);
+    //   }}
+    //   // style={btn}
+    // >
+    //   Toggle Theme
+    // </Button>
 
+    <input type="checkbox" id="switch">
+      <label for="switch"></label>
+    </input>
+  );
+}
