@@ -9,3 +9,7 @@ html {
 .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
   background-color: var(--main-button-color) !important;
 }
+
+label.MuiFormControlLabel-root {
+  padding-bottom: 30px !important;
+}
